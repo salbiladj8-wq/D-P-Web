@@ -1,0 +1,99 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.7.2",
+      "includeFiles": "**"
+    }
+  },
+  "routes": [
+    {
+      "src": "^/assets/(.*)$",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "^/handbook/?$",
+      "dest": "/handbook/index.html"
+    },
+    {
+      "src": "^/handbook/(.*)$",
+      "dest": "/handbook/$1"
+    },
+    {
+      "src": "^/jobsheet-3-bootstrap/(.*)$",
+      "dest": "/Jobsheet 3 Bootstrap/$1"
+    },
+    {
+      "src": "^/Jobsheet 3 Bootstrap/(.*)$",
+      "dest": "/Jobsheet 3 Bootstrap/$1"
+    },
+    {
+      "src": "^/jobsheet1/(.*)$",
+      "dest": "/Jobsheet1/$1"
+    },
+    {
+      "src": "^/Jobsheet1/(.*)$",
+      "dest": "/Jobsheet1/$1"
+    },
+    {
+      "src": "^/jobsheet2/(.*)$",
+      "dest": "/Jobsheet2/$1"
+    },
+    {
+      "src": "^/Jobsheet2/(.*)$",
+      "dest": "/Jobsheet2/$1"
+    },
+    {
+      "src": "^/jobsheet3/(.*)$",
+      "dest": "/Jobsheet3/$1"
+    },
+    {
+      "src": "^/Jobsheet3/(.*)$",
+      "dest": "/Jobsheet3/$1"
+    },
+    {
+      "src": "^/jobsheet4/(.*)$",
+      "dest": "/Jobsheet4/$1"
+    },
+    {
+      "src": "^/Jobsheet4/(.*)$",
+      "dest": "/Jobsheet4/$1"
+    },
+    {
+      "src": "^/jobsheet5/(.*)$",
+      "dest": "/Jobsheet5/$1"
+    },
+    {
+      "src": "^/Jobsheet5/(.*)$",
+      "dest": "/Jobsheet5/$1"
+    },
+    {
+      "src": "^/jobsheet6/(.*)$",
+      "dest": "/Jobsheet6/$1"
+    },
+    {
+      "src": "^/Jobsheet6/(.*)$",
+      "dest": "/Jobsheet6/$1"
+    },
+    {
+      "src": "^/simpus-mini/(.*)$",
+      "dest": "/simpus-mini/$1"
+    },
+    {
+      "src": "^/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|json|map|html))$",
+      "dest": "/$1"
+    },
+    {
+      "src": "^/(?:Jobsheet new|jobsheet-new|sisalon|Jobsheet7|jobsheet7|Jobsheet8|jobsheet8|api)(?:/(.*))?$",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "^/.*\\.php$",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "^/$",
+      "dest": "/index.html"
+    }
+  ]
+}
