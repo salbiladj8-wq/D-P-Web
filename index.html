@@ -451,21 +451,6 @@
             box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
         }
 
-        .card.featured {
-            --card-accent: #ec4899;
-            background: rgba(236, 72, 153, 0.05);
-            border-color: rgba(236, 72, 153, 0.3);
-        }
-
-        .card.featured .btn-launch {
-            background: linear-gradient(135deg, #ec4899, #6366f1);
-            border: none;
-        }
-
-        .card.featured .btn-launch:hover {
-            box-shadow: 0 4px 20px rgba(236, 72, 153, 0.5);
-        }
-
         /* Footer */
         footer {
             margin-top: 5rem;
@@ -512,7 +497,7 @@
             <div class="college-brand">
                 <div class="college-logo-icon">🌐</div>
                 <div class="college-info">
-                    <h3>POLINEMA &bull; D4 Teknik Informatika</h3>
+                    <h3>D4 Teknik Informatika</h3>
                     <p>Desain &amp; Pemrograman Web (Semester 3)</p>
                 </div>
             </div>
@@ -543,7 +528,7 @@
                 <span>&bull;</span>
                 <span>Absen: <strong>26</strong></span>
                 <span>&bull;</span>
-                <span>D4 Teknik Informatika &bull; POLINEMA</span>
+                <span>D4 Teknik Informatika</span>
             </div>
         </section>
 
@@ -568,8 +553,7 @@
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">Semua Modul</button>
                 <button class="filter-btn" data-filter="frontend">Frontend (JS 1-6)</button>
-                <button class="filter-btn" data-filter="backend">Backend &amp; DB (JS 7-8 &amp; New)</button>
-                <button class="filter-btn" data-filter="featured">Proyek Unggulan</button>
+                <button class="filter-btn" data-filter="backend">Backend &amp; DB (JS 7-9 &amp; New)</button>
             </div>
 
             <div class="search-box-wrap">
@@ -582,11 +566,10 @@
         <div class="cards-grid" id="cardsGrid">
 
             <!-- Card: Jobsheet New (SiSalon) -->
-            <article class="card featured" data-category="backend featured" style="--card-accent: #ec4899;">
+            <article class="card" data-category="backend" style="--card-accent: #ec4899;">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">JS NEW (REVAMP JS 8)</span>
-                        <span class="featured-tag">🔥 Unggulan</span>
                     </div>
                     <h2 class="card-title">SISALON - Salon Management System</h2>
                     <p class="card-desc">
@@ -602,6 +585,31 @@
                 <div class="card-actions">
                     <a href="/Jobsheet new/index.php" class="btn-launch">
                         <span>Buka SiSalon Web</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card: Jobsheet 9 (SISALON CRUD) -->
+            <article class="card" data-category="backend" style="--card-accent: #c96b86;">
+                <div>
+                    <div class="card-header">
+                        <span class="js-badge">JOBSHEET 9</span>
+                    </div>
+                    <h2 class="card-title">SISALON - CRUD Lengkap</h2>
+                    <p class="card-desc">
+                        Pengembangan data SISALON dari Jobsheet New dengan fitur tambah, tampil, ubah, hapus aman, pencarian server-side, dan pagination untuk layanan, pelanggan, serta karyawan.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tag php">PHP PDO</span>
+                        <span class="tag supabase">Supabase</span>
+                        <span class="tag db">PostgreSQL</span>
+                        <span class="tag js">CRUD</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="/Jobsheet9/index.php" class="btn-launch">
+                        <span>Buka Jobsheet 9</span>
                         <span>&rarr;</span>
                     </a>
                 </div>
@@ -729,7 +737,7 @@
             </article>
 
             <!-- Card: Jobsheet 3 Bootstrap -->
-            <article class="card" data-category="frontend featured" style="--card-accent: #a855f7;">
+            <article class="card" data-category="frontend" style="--card-accent: #a855f7;">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">JS 3 BOOTSTRAP</span>
@@ -854,7 +862,7 @@
         <!-- Footer -->
         <footer>
             <p>
-                &copy; 2026 <strong>Salbila Dwi Juniar</strong> (NIM: 254107020188 &bull; Absen: 26) &bull; D4 Teknik Informatika &bull; Politeknik Negeri Malang
+                &copy; 2026 <strong>Salbila Dwi Juniar</strong> (NIM: 254107020188 &bull; Absen: 26) &bull; D4 Teknik Informatika
             </p>
             <p style="margin-top: 0.35rem; color: #64748b; font-size: 0.775rem;">
                 Praktikum Desain dan Pemrograman Web (Semester 3)

@@ -84,7 +84,11 @@
       "dest": "/$1"
     },
     {
-      "src": "^/(?:Jobsheet new|jobsheet-new|sisalon|Jobsheet7|jobsheet7|Jobsheet8|jobsheet8|api)(?:/(.*))?$",
+      "src": "^/(?:Jobsheet9|jobsheet9)(?:/(.*))?$",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "^/(?:Jobsheet new|jobsheet-new|sisalon|Jobsheet7|jobsheet7|Jobsheet8|jobsheet8|Jobsheet9|jobsheet9|api)(?:/(.*))?$",
       "dest": "/api/index.php"
     },
     {

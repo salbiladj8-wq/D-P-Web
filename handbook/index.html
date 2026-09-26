@@ -465,9 +465,10 @@
             <a href="#js5" class="nav-item">⚡ JS 5: JS DOM &amp; Form Validation</a>
             <a href="#js6" class="nav-item">📦 JS 6: Data Objek &amp; Komponen</a>
 
-            <div class="nav-category">Modul Backend (JS 7 - 8 &amp; New)</div>
+            <div class="nav-category">Modul Backend (JS 7 - 9 &amp; New)</div>
             <a href="#js7" class="nav-item">🐘 JS 7: PHP Native &amp; Session</a>
             <a href="#js8" class="nav-item">🗄️ JS 8: Database PostgreSQL PDO</a>
+            <a href="#js9" class="nav-item">🧾 JS 9: CRUD SISALON</a>
             <a href="#js-new" class="nav-item">💎 JS New: SISALON (Revamp)</a>
 
             <div class="nav-category">Tanya Jawab &amp; Diskusi</div>
@@ -506,8 +507,8 @@
                     <strong>26</strong>
                 </div>
                 <div class="meta-item">
-                    <span>Institusi:</span>
-                    <strong>POLINEMA &bull; D4 Teknik Informatika</strong>
+                    <span>Jurusan:</span>
+                    <strong>D4 Teknik Informatika</strong>
                 </div>
                 <div class="meta-item">
                     <span>Database:</span>
@@ -754,14 +755,33 @@ if (searchInput) {
             </div>
         </section>
 
-        <!-- 12. Proyek Unggulan SISALON -->
+        <!-- 12. Jobsheet 9: CRUD SISALON -->
+        <section id="js9" class="doc-section">
+            <div class="section-header">
+                <span class="section-icon">🧾</span>
+                <h2>12. Jobsheet 9: CRUD Lengkap SISALON</h2>
+            </div>
+            <p>
+                Jobsheet 9 melanjutkan data SISALON dari Jobsheet New. Modul layanan, pelanggan, dan karyawan memakai database PostgreSQL yang sama sehingga data awal dan perubahan tetap tersimpan.
+            </p>
+            <h3>Fitur &amp; Kodingan Kunci:</h3>
+            <ul>
+                <li><strong>Create, Read, Update:</strong> Form tambah, tabel daftar, dan halaman edit memakai prepared statements PDO.</li>
+                <li><strong>Delete melalui POST:</strong> Tombol hapus adalah form POST dengan dialog konfirmasi pada event <code>submit</code>; handler menolak metode selain POST.</li>
+                <li><strong>Pencarian server-side:</strong> Parameter <code>q</code> memfilter nama dengan <code>ILIKE</code> dan query terparameterisasi.</li>
+                <li><strong>Pagination:</strong> Daftar dibatasi 5 baris per halaman dengan <code>LIMIT</code> dan <code>OFFSET</code>; nilai pencarian dipertahankan saat berpindah halaman.</li>
+                <li><strong>Deploy Vercel:</strong> Route Jobsheet9 diteruskan ke PHP gateway dan koneksi menggunakan konfigurasi SISALON yang sama.</li>
+            </ul>
+        </section>
+
+        <!-- 13. Jobsheet New: SISALON -->
         <section id="js-new" class="doc-section">
             <div class="section-header">
                 <span class="section-icon">💎</span>
-                <h2>12. Proyek Unggulan: SISALON (Revamp Jobsheet 8)</h2>
+                <h2>13. Jobsheet New: SISALON</h2>
             </div>
             <p>
-                Sebagai implementasi tingkat lanjut, Jobsheet 8 dikembangkan menjadi <strong>SISALON (Sistem Informasi Salon)</strong> yang memiliki kompleksitas bisnis dan arsitektur lebih tinggi.
+                Jobsheet New menjadi sumber skema dan data SISALON yang digunakan kembali pada Jobsheet 9.
             </p>
             <h3>Fitur &amp; Struktur Entitas:</h3>
             <ul>
@@ -773,11 +793,11 @@ if (searchInput) {
             </ul>
         </section>
 
-        <!-- 13. Tanya Jawab Teknis -->
+        <!-- 14. Tanya Jawab Teknis -->
         <section id="qa-teknis" class="doc-section">
             <div class="section-header">
                 <span class="section-icon">🎯</span>
-                <h2 style="color: #ec4899;">13. Tanya Jawab &amp; Pembahasan Teknis Kodingan (Q&amp;A)</h2>
+                <h2 style="color: #ec4899;">14. Tanya Jawab &amp; Pembahasan Teknis Kodingan (Q&amp;A)</h2>
             </div>
             <p>
                 Berikut adalah 10 pembahasan konsep teknis penting seputar implementasi kode pada proyek ini. Klik pada setiap pertanyaan untuk membuka pembahasan lengkap:
