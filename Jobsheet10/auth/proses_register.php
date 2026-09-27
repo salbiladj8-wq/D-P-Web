@@ -27,24 +27,31 @@ if (strlen($nama) > 100 || strlen($username) > 50 || strlen($password) < 8) {
 
 require __DIR__ . '/../includes/koneksi.php';
 
-$check = $pdo->prepare('SELECT 1 FROM users WHERE username = :username');
-$check->execute(['username' => $username]);
-if ($check->fetchColumn()) {
-    $_SESSION['flash'] = ['type' => 'error', 'pesan' => 'Username sudah digunakan.'];
+try {
+    $check = $pdo->prepare('SELECT 1 FROM users WHERE username = :username');
+    $check->execute(['username' => $username]);
+    if ($check->fetchColumn()) {
+        $_SESSION['flash'] = ['type' => 'error', 'pesan' => 'Username sudah digunakan.'];
+        header('Location: register.php');
+        exit;
+    }
+
+    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+    $insert = $pdo->prepare(
+        "INSERT INTO users (nama, username, password, role)
+         VALUES (:nama, :username, :password, 'petugas')"
+    );
+    $insert->execute([
+        'nama' => $nama,
+        'username' => $username,
+        'password' => $passwordHash,
+    ]);
+} catch (PDOException $exception) {
+    error_log('Registration failed: ' . $exception->getMessage());
+    $_SESSION['flash'] = ['type' => 'error', 'pesan' => 'Registrasi belum dapat diproses. Pastikan skema akun database sudah disiapkan.'];
     header('Location: register.php');
     exit;
 }
-
-$passwordHash = password_hash($password, PASSWORD_DEFAULT);
-$insert = $pdo->prepare(
-    "INSERT INTO users (nama, username, password, role)
-     VALUES (:nama, :username, :password, 'petugas')"
-);
-$insert->execute([
-    'nama' => $nama,
-    'username' => $username,
-    'password' => $passwordHash,
-]);
 
 $_SESSION['flash'] = ['type' => 'success', 'pesan' => 'Akun berhasil dibuat. Silakan login.'];
 header('Location: login.php');

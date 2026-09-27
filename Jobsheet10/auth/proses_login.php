@@ -14,9 +14,16 @@ $password = $_POST['password'] ?? '';
 
 require __DIR__ . '/../includes/koneksi.php';
 
-$stmt = $pdo->prepare('SELECT id, nama, username, password, role FROM users WHERE username = :username');
-$stmt->execute(['username' => $username]);
-$user = $stmt->fetch();
+try {
+    $stmt = $pdo->prepare('SELECT id, nama, username, password, role FROM users WHERE username = :username');
+    $stmt->execute(['username' => $username]);
+    $user = $stmt->fetch();
+} catch (PDOException $exception) {
+    error_log('Login failed: ' . $exception->getMessage());
+    $_SESSION['flash'] = ['type' => 'error', 'pesan' => 'Login belum dapat diproses. Pastikan skema akun database sudah disiapkan.'];
+    header('Location: login.php');
+    exit;
+}
 
 if (!$user || !password_verify($password, $user['password'])) {
     $_SESSION['flash'] = ['type' => 'error', 'pesan' => 'Username atau password salah.'];
