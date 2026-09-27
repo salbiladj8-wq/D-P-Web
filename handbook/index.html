@@ -465,10 +465,11 @@
             <a href="#js5" class="nav-item">⚡ JS 5: JS DOM &amp; Form Validation</a>
             <a href="#js6" class="nav-item">📦 JS 6: Data Objek &amp; Komponen</a>
 
-            <div class="nav-category">Modul Backend (JS 7 - 9 &amp; New)</div>
+            <div class="nav-category">Modul Backend (JS 7 - 10 &amp; New)</div>
             <a href="#js7" class="nav-item">🐘 JS 7: PHP Native &amp; Session</a>
             <a href="#js8" class="nav-item">🗄️ JS 8: Database PostgreSQL PDO</a>
             <a href="#js9" class="nav-item">🧾 JS 9: CRUD SISALON</a>
+            <a href="#js10" class="nav-item">🔐 JS 10: Autentikasi &amp; Session</a>
             <a href="#js-new" class="nav-item">💎 JS New: SISALON (Revamp)</a>
 
             <div class="nav-category">Tanya Jawab &amp; Diskusi</div>
@@ -774,11 +775,32 @@ if (searchInput) {
             </ul>
         </section>
 
-        <!-- 13. Jobsheet New: SISALON -->
+        <!-- 13. Jobsheet 10: Autentikasi dan Manajemen Sesi -->
+        <section id="js10" class="doc-section">
+            <div class="section-header">
+                <span class="section-icon">🔐</span>
+                <h2>13. Jobsheet 10: Autentikasi &amp; Manajemen Sesi</h2>
+            </div>
+            <p>
+                Jobsheet 10 melanjutkan aplikasi SISALON dari Jobsheet 9 dengan autentikasi petugas. Beranda dan halaman daftar data tetap dapat diakses publik, sedangkan operasi perubahan data membutuhkan login.
+            </p>
+            <h3>Fitur &amp; Kodingan Kunci:</h3>
+            <ul>
+                <li><strong>Registrasi:</strong> Username harus unik; password disimpan sebagai hash menggunakan <code>password_hash()</code>, bukan teks biasa.</li>
+                <li><strong>Login:</strong> Kredensial diverifikasi dengan <code>password_verify()</code>. Setelah berhasil, ID, nama, dan role petugas disimpan di session dan ID session diperbarui.</li>
+                <li><strong>Logout:</strong> Mengosongkan data session dan mengakhirinya dengan <code>session_destroy()</code>.</li>
+                <li><strong>Guard autentikasi:</strong> <code>includes/auth.php</code> memulai session bila diperlukan dan mengalihkan tamu ke Login sebelum halaman terlindungi menghasilkan output.</li>
+                <li><strong>Halaman terlindungi:</strong> Form tambah/edit, handler proses, dan hapus untuk layanan, pelanggan, dan karyawan. Beranda serta halaman daftar tetap publik.</li>
+                <li><strong>Skema database:</strong> Jalankan <code>sql/01_sisalon.sql</code> untuk tabel SISALON, lalu <code>sql/02_users.sql</code> untuk tabel akun petugas pada database PostgreSQL yang sama.</li>
+                <li><strong>Role:</strong> Role <code>petugas</code> disimpan pada akun dan session, tetapi pembatasan akses berdasarkan role belum diterapkan.</li>
+            </ul>
+        </section>
+
+        <!-- 14. Jobsheet New: SISALON -->
         <section id="js-new" class="doc-section">
             <div class="section-header">
                 <span class="section-icon">💎</span>
-                <h2>13. Jobsheet New: SISALON</h2>
+                <h2>14. Jobsheet New: SISALON</h2>
             </div>
             <p>
                 Jobsheet New menjadi sumber skema dan data SISALON yang digunakan kembali pada Jobsheet 9.
@@ -793,11 +815,11 @@ if (searchInput) {
             </ul>
         </section>
 
-        <!-- 14. Tanya Jawab Teknis -->
+        <!-- 15. Tanya Jawab Teknis -->
         <section id="qa-teknis" class="doc-section">
             <div class="section-header">
                 <span class="section-icon">🎯</span>
-                <h2 style="color: #ec4899;">14. Tanya Jawab &amp; Pembahasan Teknis Kodingan (Q&amp;A)</h2>
+                <h2 style="color: #ec4899;">15. Tanya Jawab &amp; Pembahasan Teknis Kodingan (Q&amp;A)</h2>
             </div>
             <p>
                 Berikut adalah 10 pembahasan konsep teknis penting seputar implementasi kode pada proyek ini. Klik pada setiap pertanyaan untuk membuka pembahasan lengkap:
