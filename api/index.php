@@ -1,7 +1,7 @@
 <?php
 /**
  * Unified Serverless PHP Gateway for Vercel
- * Menangani routing dinamis untuk Jobsheet new (SiSalon), Jobsheet 7, Jobsheet 8,
+ * Menangani routing dinamis untuk Jobsheet 7-11 dan Jobsheet new (SiSalon),
  * serta berkas PHP / statis lainnya saat di-deploy ke Vercel.
  */
 
@@ -35,6 +35,7 @@ $aliasMap = [
     '/jobsheet7'            => '/Jobsheet7',
     '/jobsheet8'            => '/Jobsheet8',
     '/jobsheet9'            => '/Jobsheet9',
+    '/jobsheet11'           => '/Jobsheet11',
     '/handbook'             => '/handbook',
 ];
 

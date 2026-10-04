@@ -6,7 +6,7 @@
     <title>Praktikum Desain &amp; Pemrograman Web | Salbila Dwi Juniar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-body: #090d16;
@@ -16,9 +16,9 @@
             --border-hover: rgba(99, 102, 241, 0.4);
             --primary: #6366f1;
             --primary-light: #818cf8;
-            --accent: #ec4899;
+            --accent: #315b46;
             --emerald: #10b981;
-            --amber: #f59e0b;
+            --amber: #718078;
             --cyan: #06b6d4;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
@@ -37,11 +37,6 @@
             color: var(--text-main);
             min-height: 100vh;
             line-height: 1.6;
-            background-image: 
-                radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 85% 10%, rgba(236, 72, 153, 0.12) 0%, transparent 45%),
-                radial-gradient(circle at 50% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
-            background-attachment: fixed;
         }
 
         .container {
@@ -93,7 +88,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: linear-gradient(135deg, #6366f1, #ec4899);
+            background: #315b46;
             color: white;
             text-decoration: none;
             padding: 0.65rem 1.25rem;
@@ -185,7 +180,7 @@
 
         /* Banner Handbook */
         .handbook-banner {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
+            background: #e9eee8;
             border: 1px solid rgba(99, 102, 241, 0.4);
             backdrop-filter: blur(12px);
             border-radius: 20px;
@@ -223,7 +218,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            background: linear-gradient(135deg, #6366f1, #ec4899);
+            background: #315b46;
             color: white;
             text-decoration: none;
             font-weight: 700;
@@ -247,30 +242,6 @@
             flex-wrap: wrap;
             gap: 1.25rem;
             margin-bottom: 2rem;
-        }
-
-        .filter-buttons {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-card);
-            color: var(--text-muted);
-            padding: 0.5rem 1rem;
-            border-radius: 10px;
-            font-size: 0.825rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
         }
 
         .search-box-wrap {
@@ -370,7 +341,7 @@
         .featured-tag {
             font-size: 0.7rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #ec4899, #f59e0b);
+            background: #edf1ec;
             color: #fff;
             padding: 0.2rem 0.6rem;
             border-radius: 9999px;
@@ -412,7 +383,7 @@
 
         .tag.html { color: #f97316; border-color: rgba(249, 115, 22, 0.3); background: rgba(249, 115, 22, 0.1); }
         .tag.css { color: #38bdf8; border-color: rgba(56, 189, 248, 0.3); background: rgba(56, 189, 248, 0.1); }
-        .tag.js { color: #facc15; border-color: rgba(250, 204, 21, 0.3); background: rgba(250, 204, 21, 0.1); }
+        .tag.js { color: #66736b; }
         .tag.bs { color: #a855f7; border-color: rgba(168, 85, 247, 0.3); background: rgba(168, 85, 247, 0.1); }
         .tag.php { color: #818cf8; border-color: rgba(129, 140, 248, 0.3); background: rgba(129, 140, 248, 0.1); }
         .tag.db { color: #34d399; border-color: rgba(52, 211, 153, 0.3); background: rgba(52, 211, 153, 0.1); }
@@ -486,6 +457,321 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        :root {
+            --bg-body: #f4f3ee;
+            --bg-card: #fff;
+            --bg-card-hover: #fff;
+            --border-card: #e5e6df;
+            --border-hover: #b8c9bd;
+            --primary: #315b46;
+            --primary-light: #315b46;
+            --text-main: #25312a;
+            --text-muted: #66736b;
+            --text-sub: #7c877f;
+        }
+
+        body {
+            background: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .container {
+            max-width: 1160px;
+            padding-top: 1.5rem;
+        }
+
+        .top-bar {
+            border-bottom-color: #dedfd7;
+            margin-bottom: 1rem;
+        }
+
+        .college-logo-icon {
+            background: #315b46;
+            border-radius: 10px;
+            box-shadow: none;
+        }
+
+        .college-info h3,
+        .card-title {
+            color: #25312a;
+        }
+
+        .college-info p {
+            color: #748078;
+        }
+
+        .handbook-btn-top,
+        .btn-handbook-large {
+            background: #315b46;
+            border-radius: 8px;
+            box-shadow: none;
+        }
+
+        .handbook-btn-top:hover,
+        .btn-handbook-large:hover {
+            background: #244936;
+            box-shadow: none;
+        }
+
+        .hero {
+            max-width: none;
+            margin: 0;
+            padding: 2.5rem 0 2rem;
+            text-align: left;
+        }
+
+        .badge-pill {
+            border: 0;
+            border-radius: 4px;
+            background: transparent;
+            color: #55715f;
+            margin-bottom: 0.85rem;
+            padding: 0;
+        }
+
+        .pulse-dot {
+            display: none;
+        }
+
+        .hero h1 {
+            max-width: 760px;
+            background: none;
+            color: #24352b;
+            font-family: 'Manrope', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            letter-spacing: -0.045em;
+            -webkit-text-fill-color: currentColor;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 0 1.4rem;
+            color: #66736b;
+        }
+
+        .author-card {
+            flex-wrap: wrap;
+            border: 0;
+            border-left: 3px solid #8aa491;
+            border-radius: 0;
+            background: transparent;
+            padding: 0.15rem 0 0.15rem 0.85rem;
+            color: #536158;
+            backdrop-filter: none;
+        }
+
+        .author-card strong {
+            color: #315b46;
+        }
+
+        .handbook-banner {
+            border: 1px solid #dfe5dd;
+            border-radius: 12px;
+            background: #e9eee8;
+            box-shadow: none;
+            margin-bottom: 3rem;
+            padding: 1.5rem 1.75rem;
+            backdrop-filter: none;
+        }
+
+        .handbook-banner-content h2 {
+            color: #283b2f;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .handbook-banner-content p {
+            color: #637168;
+        }
+
+        .catalog-heading {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .catalog-kicker {
+            color: #55715f;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .catalog-heading h2 {
+            margin-top: 0.2rem;
+            color: #24352b;
+            font-family: 'Manrope', sans-serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            letter-spacing: -0.035em;
+        }
+
+        .catalog-count {
+            color: #748078;
+            font-size: 0.85rem;
+        }
+
+        .controls-row {
+            justify-content: flex-start;
+            margin-bottom: 1.25rem;
+        }
+
+        .tech-tags {
+            display: none;
+        }
+
+        .search-box-wrap {
+            width: min(100%, 430px);
+            min-width: 0;
+        }
+
+        .search-box-wrap input {
+            border: 1px solid #d9ddd7;
+            border-radius: 8px;
+            background: #fff;
+            color: #25312a;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+        }
+
+        .search-box-wrap input:focus {
+            border-color: #78927f;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(79, 111, 88, 0.12);
+        }
+
+        .search-icon {
+            color: #718078;
+            font-size: 1.1rem;
+        }
+
+        .cards-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .empty-state {
+            display: none;
+            border: 1px dashed #cbd3ca;
+            border-radius: 10px;
+            color: #66736b;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .card {
+            min-height: 290px;
+            border: 1px solid #e1e4dd;
+            border-radius: 10px;
+            background: #fff;
+            padding: 1.35rem;
+            backdrop-filter: none;
+            box-shadow: 0 2px 8px rgba(36, 53, 43, 0.025);
+        }
+
+        .card::before {
+            display: none;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: #b8c9bd;
+            background: #fff;
+            box-shadow: 0 10px 24px rgba(36, 53, 43, 0.08);
+        }
+
+        .card-header {
+            margin-bottom: 1rem;
+        }
+
+        .js-badge {
+            border: 0;
+            border-radius: 4px;
+            background: #edf1ec;
+            color: #3d5e49;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.045em;
+            text-transform: uppercase;
+        }
+
+        .featured-tag {
+            display: none;
+        }
+
+        .card-title {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.14rem;
+            letter-spacing: -0.025em;
+        }
+
+        .card-desc {
+            color: #6b766e;
+            line-height: 1.65;
+        }
+
+        .card-actions {
+            border-top-color: #edf0eb;
+        }
+
+        .btn-launch {
+            border: 1px solid #315b46;
+            border-radius: 7px;
+            background: #315b46;
+            color: #fff;
+        }
+
+        .btn-launch:hover {
+            border-color: #244936;
+            background: #244936;
+            box-shadow: none;
+        }
+
+        footer {
+            border-top-color: #dedfd7;
+            color: #748078;
+        }
+
+        @media (max-width: 900px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 620px) {
+            .container {
+                padding: 1rem 1rem 3rem;
+            }
+
+            .top-bar {
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .handbook-btn-top {
+                padding: 0.55rem 0.75rem;
+                font-size: 0.78rem;
+            }
+
+            .hero {
+                padding: 2rem 0 1.5rem;
+            }
+
+            .handbook-banner {
+                padding: 1.25rem;
+            }
+
+            .catalog-heading {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -510,15 +796,12 @@
 
         <!-- Hero Section -->
         <section class="hero">
-            <div class="badge-pill">
-                <span class="pulse-dot"></span>
-                <span>Praktikum Desain &amp; Pemrograman Web &bull; Vercel Live Deployment</span>
-            </div>
+            <div class="badge-pill">D4 Teknik Informatika &bull; Semester 3</div>
 
             <h1>Selamat Datang di Praktikum Desain &amp; Pemrograman Web</h1>
 
             <p>
-                Koleksi seluruh modul praktikum dari Jobsheet 1 hingga pengembangan tingkat lanjut (SiSalon) yang terintegrasi secara langsung di Vercel dengan database PostgreSQL Supabase.
+                Arsip materi dan aplikasi dari setiap jobsheet. Pilih modul untuk membuka proyek, atau gunakan handbook untuk membaca ringkasan materi dan panduan teknis.
             </p>
 
             <div class="author-card">
@@ -548,78 +831,48 @@
             </div>
         </section>
 
-        <!-- Controls (Filter & Search) -->
-        <div class="controls-row">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Semua Modul</button>
-                <button class="filter-btn" data-filter="frontend">Frontend (JS 1-6)</button>
-                <button class="filter-btn" data-filter="backend">Backend &amp; DB (JS 7-10 &amp; New)</button>
+        <section class="catalog-heading" aria-labelledby="catalogTitle">
+            <div>
+                <p class="catalog-kicker">Arsip praktikum</p>
+                <h2 id="catalogTitle">Jelajahi jobsheet</h2>
             </div>
+            <p class="catalog-count" id="resultsCount" aria-live="polite">14 modul</p>
+        </section>
 
+        <div class="controls-row">
             <div class="search-box-wrap">
-                <span class="search-icon">🔍</span>
-                <input type="text" id="searchInput" placeholder="Cari modul atau materi...">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="search" id="searchInput" aria-label="Cari jobsheet" placeholder="Cari jobsheet atau materi...">
             </div>
         </div>
 
         <!-- Cards Grid -->
         <div class="cards-grid" id="cardsGrid">
 
-            <!-- Card: Jobsheet New (SiSalon) -->
-            <article class="card" data-category="backend" style="--card-accent: #ec4899;">
+            <!-- Card: Jobsheet 11 -->
+            <article class="card">
                 <div>
                     <div class="card-header">
-                        <span class="js-badge">JS NEW (REVAMP JS 8)</span>
+                        <span class="js-badge">Jobsheet 11</span>
                     </div>
-                    <h2 class="card-title">SISALON - Salon Management System</h2>
+                    <h2 class="card-title">Keamanan Web Dasar</h2>
                     <p class="card-desc">
-                        Sistem informasi salon kecantikan modern dengan pengelolaan multi-entitas (Layanan, Pelanggan, Karyawan). Menggunakan koneksi cloud Supabase PostgreSQL dan arsitektur serverless Vercel.
+                        Melindungi aplikasi SISALON dengan output escaping untuk mencegah XSS, token CSRF di setiap form, dan regenerasi session setelah login.
                     </p>
-                    <div class="tech-tags">
-                        <span class="tag php">PHP PDO</span>
-                        <span class="tag supabase">Supabase Cloud</span>
-                        <span class="tag db">PostgreSQL</span>
-                        <span class="tag js">Vercel PHP</span>
-                    </div>
                 </div>
                 <div class="card-actions">
-                    <a href="/Jobsheet new/index.php" class="btn-launch">
-                        <span>Buka SiSalon Web</span>
-                        <span>&rarr;</span>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Card: Jobsheet 9 (SISALON CRUD) -->
-            <article class="card" data-category="backend" style="--card-accent: #c96b86;">
-                <div>
-                    <div class="card-header">
-                        <span class="js-badge">JOBSHEET 9</span>
-                    </div>
-                    <h2 class="card-title">SISALON - CRUD Lengkap</h2>
-                    <p class="card-desc">
-                        Pengembangan data SISALON dari Jobsheet New dengan fitur tambah, tampil, ubah, hapus aman, pencarian server-side, dan pagination untuk layanan, pelanggan, serta karyawan.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tag php">PHP PDO</span>
-                        <span class="tag supabase">Supabase</span>
-                        <span class="tag db">PostgreSQL</span>
-                        <span class="tag js">CRUD</span>
-                    </div>
-                </div>
-                <div class="card-actions">
-                    <a href="/Jobsheet9/index.php" class="btn-launch">
-                        <span>Buka Jobsheet 9</span>
+                    <a href="/Jobsheet11/index.php" class="btn-launch">
+                        <span>Buka Jobsheet 11</span>
                         <span>&rarr;</span>
                     </a>
                 </div>
             </article>
 
             <!-- Card: Jobsheet 10 (SISALON Authentication) -->
-            <article class="card" data-category="backend" style="--card-accent: #34d399;">
+            <article class="card">
                 <div>
                     <div class="card-header">
-                        <span class="js-badge">JOBSHEET 10</span>
+                        <span class="js-badge">Jobsheet 10</span>
                     </div>
                     <h2 class="card-title">SISALON - Autentikasi Petugas</h2>
                     <p class="card-desc">
@@ -640,8 +893,58 @@
                 </div>
             </article>
 
+            <!-- Card: Jobsheet 9 (SISALON CRUD) -->
+            <article class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="js-badge">Jobsheet 9</span>
+                    </div>
+                    <h2 class="card-title">SISALON - CRUD Lengkap</h2>
+                    <p class="card-desc">
+                        Pengembangan data SISALON dari Jobsheet New dengan fitur tambah, tampil, ubah, hapus aman, pencarian server-side, dan pagination untuk layanan, pelanggan, serta karyawan.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tag php">PHP PDO</span>
+                        <span class="tag supabase">Supabase</span>
+                        <span class="tag db">PostgreSQL</span>
+                        <span class="tag js">CRUD</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="/Jobsheet9/index.php" class="btn-launch">
+                        <span>Buka Jobsheet 9</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card: Jobsheet New (SiSalon) -->
+            <article class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="js-badge">Jobsheet New</span>
+                    </div>
+                    <h2 class="card-title">SISALON - Salon Management System</h2>
+                    <p class="card-desc">
+                        Sistem informasi salon kecantikan modern dengan pengelolaan multi-entitas (Layanan, Pelanggan, Karyawan). Menggunakan koneksi cloud Supabase PostgreSQL dan arsitektur serverless Vercel.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tag php">PHP PDO</span>
+                        <span class="tag supabase">Supabase Cloud</span>
+                        <span class="tag db">PostgreSQL</span>
+                        <span class="tag js">Vercel PHP</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="/Jobsheet new/index.php" class="btn-launch">
+                        <span>Buka SiSalon Web</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
+
             <!-- Card: Jobsheet 8 -->
-            <article class="card" data-category="backend" style="--card-accent: #34d399;">
+            <article class="card">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">JOBSHEET 8</span>
@@ -666,7 +969,7 @@
             </article>
 
             <!-- Card: Jobsheet 7 -->
-            <article class="card" data-category="backend" style="--card-accent: #818cf8;">
+            <article class="card">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">JOBSHEET 7</span>
@@ -690,7 +993,7 @@
             </article>
 
             <!-- Card: Jobsheet 6 -->
-            <article class="card" data-category="frontend" style="--card-accent: #facc15;">
+            <article class="card">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">JOBSHEET 6</span>
@@ -714,7 +1017,7 @@
             </article>
 
             <!-- Card: Jobsheet 5 -->
-            <article class="card" data-category="frontend" style="--card-accent: #facc15;">
+            <article class="card">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">JOBSHEET 5</span>
@@ -738,7 +1041,7 @@
             </article>
 
             <!-- Card: Jobsheet 4 -->
-            <article class="card" data-category="frontend" style="--card-accent: #06b6d4;">
+            <article class="card">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">JOBSHEET 4</span>
@@ -762,7 +1065,7 @@
             </article>
 
             <!-- Card: Jobsheet 3 Bootstrap -->
-            <article class="card" data-category="frontend" style="--card-accent: #a855f7;">
+            <article class="card">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">JS 3 BOOTSTRAP</span>
@@ -787,7 +1090,7 @@
             </article>
 
             <!-- Card: Jobsheet 3 -->
-            <article class="card" data-category="frontend" style="--card-accent: #38bdf8;">
+            <article class="card">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">JOBSHEET 3</span>
@@ -811,7 +1114,7 @@
             </article>
 
             <!-- Card: Jobsheet 2 -->
-            <article class="card" data-category="frontend" style="--card-accent: #38bdf8;">
+            <article class="card">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">JOBSHEET 2</span>
@@ -835,7 +1138,7 @@
             </article>
 
             <!-- Card: Jobsheet 1 -->
-            <article class="card" data-category="frontend" style="--card-accent: #f97316;">
+            <article class="card">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">JOBSHEET 1</span>
@@ -859,7 +1162,7 @@
             </article>
 
             <!-- Card: SIMPUS-Mini Prototipe -->
-            <article class="card" data-category="frontend" style="--card-accent: #06b6d4;">
+            <article class="card">
                 <div>
                     <div class="card-header">
                         <span class="js-badge">PROTOTIPE</span>
@@ -883,6 +1186,7 @@
             </article>
 
         </div>
+        <p class="empty-state" id="emptyState">Tidak ada jobsheet yang cocok. Coba kata pencarian lain.</p>
 
         <!-- Footer -->
         <footer>
@@ -896,22 +1200,34 @@
 
     </div>
 
-    <!-- Client-side filtering & search script -->
+    <!-- Client-side search and latest-first module order -->
     <script>
         const searchInput = document.getElementById('searchInput');
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const cards = document.querySelectorAll('.card');
+        const cardsGrid = document.getElementById('cardsGrid');
+        const cards = Array.from(cardsGrid.querySelectorAll('.card'));
+        const resultsCount = document.getElementById('resultsCount');
+        const emptyState = document.getElementById('emptyState');
+        const moduleOrder = new Map([
+            ['jobsheet 11', 1],
+            ['jobsheet 10', 2],
+            ['jobsheet 9', 3],
+            ['jobsheet new', 4],
+            ['jobsheet 8', 5],
+            ['jobsheet 7', 6],
+            ['jobsheet 6', 7],
+            ['jobsheet 5', 8],
+            ['jobsheet 4', 9],
+            ['jobsheet 3', 10],
+            ['js 3 bootstrap', 11],
+            ['jobsheet 2', 12],
+            ['jobsheet 1', 13]
+        ]);
 
-        let currentFilter = 'all';
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentFilter = btn.getAttribute('data-filter');
-                applyFilterAndSearch();
-            });
-        });
+        cards.sort((first, second) => {
+            const firstBadge = first.querySelector('.js-badge').textContent.trim().toLowerCase();
+            const secondBadge = second.querySelector('.js-badge').textContent.trim().toLowerCase();
+            return (moduleOrder.get(firstBadge) ?? 99) - (moduleOrder.get(secondBadge) ?? 99);
+        }).forEach(card => cardsGrid.appendChild(card));
 
         searchInput.addEventListener('input', () => {
             applyFilterAndSearch();
@@ -919,27 +1235,24 @@
 
         function applyFilterAndSearch() {
             const query = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
 
             cards.forEach(card => {
-                const category = card.getAttribute('data-category') || '';
-                const title = card.querySelector('.card-title')?.innerText.toLowerCase() || '';
-                const desc = card.querySelector('.card-desc')?.innerText.toLowerCase() || '';
-                const tags = card.querySelector('.tech-tags')?.innerText.toLowerCase() || '';
-                const badge = card.querySelector('.js-badge')?.innerText.toLowerCase() || '';
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+                const badge = card.querySelector('.js-badge').textContent.toLowerCase();
+                const matchesSearch = !query || title.includes(query) || desc.includes(query) || badge.includes(query);
 
-                const matchesFilter = (currentFilter === 'all') || category.includes(currentFilter);
-                const matchesSearch = !query || 
-                    title.includes(query) || 
-                    desc.includes(query) || 
-                    tags.includes(query) || 
-                    badge.includes(query);
-
-                if (matchesFilter && matchesSearch) {
+                if (matchesSearch) {
                     card.style.display = 'flex';
+                    visibleCount++;
                 } else {
                     card.style.display = 'none';
                 }
             });
+
+            resultsCount.textContent = query ? `${visibleCount} modul ditemukan` : `${visibleCount} modul`;
+            emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
         }
     </script>
 </body>

@@ -16,9 +16,9 @@
             --border-active: rgba(99, 102, 241, 0.5);
             --primary: #6366f1;
             --primary-light: #818cf8;
-            --accent: #ec4899;
-            --emerald: #10b981;
-            --amber: #f59e0b;
+            --accent: #315b46;
+            --emerald: #4f765d;
+            --amber: #718078;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --text-sub: #64748b;
@@ -456,24 +456,25 @@
             <a href="#ringkasan" class="nav-item active">📌 Ringkasan Eksekutif</a>
             <a href="#arsitektur" class="nav-item">🏗️ Arsitektur Vercel &amp; Cloud</a>
             
-            <div class="nav-category">Modul Frontend (JS 1 - 6)</div>
-            <a href="#js1" class="nav-item">📘 JS 1: HTML Semantik</a>
-            <a href="#js2" class="nav-item">🎨 JS 2: CSS Box Model</a>
-            <a href="#js3" class="nav-item">📐 JS 3: CSS Flexbox &amp; Grid</a>
-            <a href="#js3-bs" class="nav-item">🚀 JS 3: Framework Bootstrap 5</a>
-            <a href="#js4" class="nav-item">📱 JS 4: Wireframe &amp; Layout</a>
-            <a href="#js5" class="nav-item">⚡ JS 5: JS DOM &amp; Form Validation</a>
-            <a href="#js6" class="nav-item">📦 JS 6: Data Objek &amp; Komponen</a>
+            <div class="nav-category">Jobsheet terbaru</div>
+            <a href="#js11" class="nav-item">JS 11: Keamanan Web Dasar</a>
+            <a href="#js10" class="nav-item">JS 10: Autentikasi &amp; Session</a>
+            <a href="#js9" class="nav-item">JS 9: CRUD SISALON</a>
+            <a href="#js-new" class="nav-item">Jobsheet New: SISALON</a>
 
-            <div class="nav-category">Modul Backend (JS 7 - 10 &amp; New)</div>
-            <a href="#js7" class="nav-item">🐘 JS 7: PHP Native &amp; Session</a>
-            <a href="#js8" class="nav-item">🗄️ JS 8: Database PostgreSQL PDO</a>
-            <a href="#js9" class="nav-item">🧾 JS 9: CRUD SISALON</a>
-            <a href="#js10" class="nav-item">🔐 JS 10: Autentikasi &amp; Session</a>
-            <a href="#js-new" class="nav-item">💎 JS New: SISALON (Revamp)</a>
+            <div class="nav-category">Jobsheet sebelumnya</div>
+            <a href="#js8" class="nav-item">JS 8: Database PostgreSQL PDO</a>
+            <a href="#js7" class="nav-item">JS 7: PHP Native &amp; Session</a>
+            <a href="#js6" class="nav-item">JS 6: Data Objek &amp; Komponen</a>
+            <a href="#js5" class="nav-item">⚡ JS 5: JS DOM &amp; Form Validation</a>
+            <a href="#js4" class="nav-item">JS 4: Wireframe &amp; Layout</a>
+            <a href="#js3" class="nav-item">JS 3: CSS Flexbox &amp; Grid</a>
+            <a href="#js3-bs" class="nav-item">JS 3: Framework Bootstrap 5</a>
+            <a href="#js2" class="nav-item">JS 2: CSS Box Model</a>
+            <a href="#js1" class="nav-item">JS 1: HTML Semantik</a>
 
             <div class="nav-category">Tanya Jawab &amp; Diskusi</div>
-            <a href="#qa-teknis" class="nav-item" style="color: #ec4899; font-weight: 700;">🎯 Tanya Jawab &amp; Diskusi Kode</a>
+            <a href="#qa-teknis" class="nav-item">🎯 Tanya Jawab &amp; Diskusi Kode</a>
         </nav>
 
         <div class="sidebar-footer">
@@ -775,35 +776,14 @@ if (searchInput) {
             </ul>
         </section>
 
-        <!-- 13. Jobsheet 10: Autentikasi dan Manajemen Sesi -->
-        <section id="js10" class="doc-section">
-            <div class="section-header">
-                <span class="section-icon">🔐</span>
-                <h2>13. Jobsheet 10: Autentikasi &amp; Manajemen Sesi</h2>
-            </div>
-            <p>
-                Jobsheet 10 melanjutkan aplikasi SISALON dari Jobsheet 9 dengan autentikasi petugas. Beranda dan halaman daftar data tetap dapat diakses publik, sedangkan operasi perubahan data membutuhkan login.
-            </p>
-            <h3>Fitur &amp; Kodingan Kunci:</h3>
-            <ul>
-                <li><strong>Registrasi:</strong> Username harus unik; password disimpan sebagai hash menggunakan <code>password_hash()</code>, bukan teks biasa.</li>
-                <li><strong>Login:</strong> Kredensial diverifikasi dengan <code>password_verify()</code>. Setelah berhasil, ID, nama, dan role petugas disimpan di session dan ID session diperbarui.</li>
-                <li><strong>Logout:</strong> Mengosongkan data session dan mengakhirinya dengan <code>session_destroy()</code>.</li>
-                <li><strong>Guard autentikasi:</strong> <code>includes/auth.php</code> memulai session bila diperlukan dan mengalihkan tamu ke Login sebelum halaman terlindungi menghasilkan output.</li>
-                <li><strong>Halaman terlindungi:</strong> Form tambah/edit, handler proses, dan hapus untuk layanan, pelanggan, dan karyawan. Beranda serta halaman daftar tetap publik.</li>
-                <li><strong>Skema database:</strong> Jalankan <code>sql/01_sisalon.sql</code> untuk tabel SISALON, lalu <code>sql/02_users.sql</code> untuk tabel akun petugas pada database PostgreSQL yang sama.</li>
-                <li><strong>Role:</strong> Role <code>petugas</code> disimpan pada akun dan session, tetapi pembatasan akses berdasarkan role belum diterapkan.</li>
-            </ul>
-        </section>
-
-        <!-- 14. Jobsheet New: SISALON -->
+        <!-- 13. Jobsheet New: SISALON -->
         <section id="js-new" class="doc-section">
             <div class="section-header">
                 <span class="section-icon">💎</span>
-                <h2>14. Jobsheet New: SISALON</h2>
+                <h2>13. Jobsheet New: SISALON</h2>
             </div>
             <p>
-                Jobsheet New menjadi sumber skema dan data SISALON yang digunakan kembali pada Jobsheet 9.
+                Jobsheet New adalah fondasi aplikasi SiSalon yang dilanjutkan pada Jobsheet 9. Modul ini memperkenalkan pengelolaan beberapa entitas dengan PHP dan PostgreSQL.
             </p>
             <h3>Fitur &amp; Struktur Entitas:</h3>
             <ul>
@@ -812,14 +792,96 @@ if (searchInput) {
                 <li><strong>Entitas Karyawan:</strong> Data staf kapster dan beautician (nama, nomor identitas <code>KRYxxx</code>, jabatan, kontak).</li>
                 <li><strong>Operasi CRUD Lengkap:</strong> Create, Read, Update, Delete di semua modul dengan konfirmasi hapus interaktif.</li>
                 <li><strong>Flash Messages:</strong> Notifikasi feedback sukses/gagal operasi menggunakan session flash.</li>
+                <li><strong>Peran dalam urutan jobsheet:</strong> Struktur tabel dan data awal di sini menjadi landasan CRUD di Jobsheet 9, lalu autentikasi di Jobsheet 10 dan pengamanan form di Jobsheet 11.</li>
             </ul>
         </section>
 
-        <!-- 15. Tanya Jawab Teknis -->
+        <!-- 14. Jobsheet 10: Autentikasi dan Manajemen Sesi -->
+        <section id="js10" class="doc-section">
+            <div class="section-header">
+                <span class="section-icon">🔐</span>
+                <h2>14. Jobsheet 10: Autentikasi &amp; Manajemen Sesi</h2>
+            </div>
+            <p>
+                Jobsheet 10 melanjutkan aplikasi SISALON dari Jobsheet 9 dengan autentikasi petugas. Beranda dan halaman daftar data tetap dapat diakses publik, sedangkan operasi perubahan data membutuhkan login.
+            </p>
+            <h3>Fitur &amp; Kodingan Kunci:</h3>
+            <ul>
+                <li><strong>Registrasi:</strong> Username harus unik; password disimpan sebagai hash menggunakan <code>password_hash()</code>, bukan teks biasa.</li>
+                <li><strong>Login:</strong> Kredensial diverifikasi dengan <code>password_verify()</code>. Setelah berhasil, ID, nama, dan role petugas disimpan di session.</li>
+                <li><strong>Logout:</strong> Mengosongkan data session dan mengakhirinya dengan <code>session_destroy()</code>.</li>
+                <li><strong>Guard autentikasi:</strong> <code>includes/auth.php</code> memulai session bila diperlukan dan mengalihkan tamu ke Login sebelum halaman terlindungi menghasilkan output.</li>
+                <li><strong>Halaman terlindungi:</strong> Form tambah/edit, handler proses, dan hapus untuk layanan, pelanggan, dan karyawan. Beranda serta halaman daftar tetap publik.</li>
+                <li><strong>Skema database:</strong> Jalankan <code>sql/01_sisalon.sql</code> untuk tabel SISALON, lalu <code>sql/02_users.sql</code> untuk tabel akun petugas pada database PostgreSQL yang sama.</li>
+                <li><strong>Role:</strong> Role <code>petugas</code> disimpan pada akun dan session, tetapi pembatasan akses berdasarkan role belum diterapkan.</li>
+            </ul>
+        </section>
+
+        <!-- 15. Jobsheet 11: Keamanan Web Dasar -->
+        <section id="js11" class="doc-section">
+            <div class="section-header">
+                <span class="section-icon">🛡️</span>
+                <h2>15. Jobsheet 11: Keamanan Web Dasar</h2>
+            </div>
+            <p>
+                Jobsheet 11 memperkuat aplikasi SISALON dari Jobsheet 10. Tujuannya adalah mencegah eksekusi skrip dari data pengguna, memastikan permintaan perubahan berasal dari form aplikasi, dan memperbarui identitas session setelah login.
+            </p>
+
+            <h3>Perubahan dari Jobsheet 10</h3>
+            <ul>
+                <li><strong>Helper output:</strong> <code>includes/helpers.php</code> menyediakan <code>e()</code> untuk mengubah nilai menjadi teks HTML aman dengan <code>htmlspecialchars()</code>. Gunakan saat mencetak data database, input pencarian, nilai <code>$_GET</code>, dan nama petugas.</li>
+                <li><strong>Perlindungan XSS:</strong> Semua data dinamis yang dimasukkan ke halaman di-escape di titik keluaran; validasi input saja tidak menggantikan escaping.</li>
+                <li><strong>Token CSRF:</strong> <code>includes/csrf.php</code> menyediakan <code>csrf_token()</code>, <code>csrf_field()</code>, dan <code>csrf_verify()</code>. Token sesi dikirim sebagai input tersembunyi di setiap form POST.</li>
+                <li><strong>Verifikasi perubahan:</strong> Handler tambah, edit, hapus, login, dan registrasi memeriksa metode HTTP serta token CSRF sebelum menjalankan perubahan database.</li>
+                <li><strong>Urutan guard:</strong> Halaman operasi yang membutuhkan autentikasi memuat <code>includes/auth.php</code> lebih dulu, kemudian memverifikasi token. Pengunjung tanpa login tetap diarahkan ke halaman login.</li>
+                <li><strong>Session fixation:</strong> Setelah kredensial login berhasil diverifikasi, <code>session_regenerate_id(true)</code> mengganti ID session lama sebelum data pengguna disimpan.</li>
+                <li><strong>SQL Injection:</strong> Query tetap menggunakan prepared statements PDO dan parameter binding, sama seperti modul sebelumnya.</li>
+            </ul>
+
+            <h3>Struktur berkas keamanan</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Berkas</th><th>Tanggung jawab</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>includes/helpers.php</code></td><td>Escaping keluaran HTML melalui fungsi <code>e()</code>.</td></tr>
+                        <tr><td><code>includes/csrf.php</code></td><td>Membuat token sesi, mencetak field form, dan menolak token yang tidak valid.</td></tr>
+                        <tr><td><code>includes/header.php</code></td><td>Memuat helper dan utilitas CSRF agar tersedia pada halaman aplikasi.</td></tr>
+                        <tr><td><code>auth/proses_login.php</code></td><td>Memverifikasi kredensial dan meregenerasi ID session setelah login berhasil.</td></tr>
+                        <tr><td><code>docs/security-checklist.md</code></td><td>Checklist audit dan pemetaan mitigasi XSS, CSRF, session fixation, serta SQL Injection.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Cara menguji keamanan</h3>
+            <ol>
+                <li><strong>Uji XSS:</strong> Masukkan judul atau nama seperti <code>&lt;script&gt;alert(1)&lt;/script&gt;</code>. Daftar harus menampilkan karakter sebagai teks, bukan menjalankan JavaScript.</li>
+                <li><strong>Uji CSRF:</strong> Login, kirim form perubahan data tanpa field <code>csrf_token</code>, dan pastikan server menolak permintaan dengan HTTP 403.</li>
+                <li><strong>Uji urutan guard:</strong> Kirim permintaan ke handler yang dilindungi saat belum login. Aplikasi harus mengarahkan ke login sebelum pemeriksaan CSRF.</li>
+                <li><strong>Uji session:</strong> Login dengan akun valid dan pastikan aplikasi meregenerasi ID session; logout harus mengakhiri session.</li>
+                <li><strong>Uji SQL:</strong> Cari atau kirim teks khusus SQL; masukan harus diperlakukan sebagai nilai parameter dan tidak mengubah struktur query.</li>
+            </ol>
+
+            <h3>Konfigurasi dan privasi kredensial</h3>
+            <ul>
+                <li>Ekstensi PHP <code>pdo_pgsql</code> harus aktif untuk koneksi PostgreSQL.</li>
+                <li>Konfigurasi lokal dapat disimpan di <code>Jobsheet11/includes/.env</code>; file tersebut diabaikan Git dan tidak boleh dipublikasikan.</li>
+                <li>Untuk deployment, atur variabel <code>SUPABASE_DB_HOST</code>, <code>SUPABASE_DB_PORT</code>, <code>SUPABASE_DB_NAME</code>, <code>SUPABASE_DB_USER</code>, dan <code>SUPABASE_DB_PASSWORD</code> pada pengaturan Environment Variables Vercel. Jangan masukkan password ke source code atau handbook.</li>
+                <li>Gunakan parameter koneksi Session Pooler persis seperti yang diberikan dashboard Supabase. Jaringan lokal yang hanya memiliki IPv6 dapat membutuhkan jaringan IPv4 untuk Session Pooler.</li>
+                <li>Pastikan tabel SISALON dan <code>users</code> sudah dibuat dengan skrip di direktori <code>Jobsheet11/sql/</code>.</li>
+            </ul>
+
+            <p>
+                Checklist rinci tersedia pada <a href="/Jobsheet11/docs/security-checklist.md">dokumen audit Jobsheet 11</a>.
+            </p>
+        </section>
+
+        <!-- 16. Tanya Jawab Teknis -->
         <section id="qa-teknis" class="doc-section">
             <div class="section-header">
                 <span class="section-icon">🎯</span>
-                <h2 style="color: #ec4899;">15. Tanya Jawab &amp; Pembahasan Teknis Kodingan (Q&amp;A)</h2>
+                <h2>16. Tanya Jawab &amp; Pembahasan Teknis Kodingan (Q&amp;A)</h2>
             </div>
             <p>
                 Berikut adalah 10 pembahasan konsep teknis penting seputar implementasi kode pada proyek ini. Klik pada setiap pertanyaan untuk membuka pembahasan lengkap:
