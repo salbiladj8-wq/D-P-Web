@@ -459,20 +459,22 @@
         }
 
         :root {
-            --bg-body: #f4f3ee;
+            --bg-body: #fff9f5;
             --bg-card: #fff;
             --bg-card-hover: #fff;
-            --border-card: #e5e6df;
-            --border-hover: #b8c9bd;
-            --primary: #315b46;
-            --primary-light: #315b46;
-            --text-main: #25312a;
-            --text-muted: #66736b;
-            --text-sub: #7c877f;
+            --border-card: #f0ddd5;
+            --border-hover: #df9aab;
+            --primary: #b94e70;
+            --primary-light: #a74365;
+            --text-main: #392b2c;
+            --text-muted: #705f60;
+            --text-sub: #927e78;
         }
 
         body {
-            background: var(--bg-body);
+            background:
+                radial-gradient(ellipse at 88% 4%, rgba(248, 211, 126, 0.18), transparent 28rem),
+                var(--bg-body);
             color: var(--text-main);
             font-family: 'DM Sans', sans-serif;
         }
@@ -483,35 +485,35 @@
         }
 
         .top-bar {
-            border-bottom-color: #dedfd7;
+            border-bottom-color: #eedbd3;
             margin-bottom: 1rem;
         }
 
         .college-logo-icon {
-            background: #315b46;
+            background: #b94e70;
             border-radius: 10px;
             box-shadow: none;
         }
 
         .college-info h3,
         .card-title {
-            color: #25312a;
+            color: #392b2c;
         }
 
         .college-info p {
-            color: #748078;
+            color: #927e78;
         }
 
         .handbook-btn-top,
         .btn-handbook-large {
-            background: #315b46;
+            background: #b94e70;
             border-radius: 8px;
             box-shadow: none;
         }
 
         .handbook-btn-top:hover,
         .btn-handbook-large:hover {
-            background: #244936;
+            background: #983a5a;
             box-shadow: none;
         }
 
@@ -523,12 +525,12 @@
         }
 
         .badge-pill {
-            border: 0;
-            border-radius: 4px;
-            background: transparent;
-            color: #55715f;
+            border: 1px solid #f0d59c;
+            border-radius: 999px;
+            background: #fff4d6;
+            color: #8a6620;
             margin-bottom: 0.85rem;
-            padding: 0;
+            padding: 0.35rem 0.8rem;
         }
 
         .pulse-dot {
@@ -538,7 +540,7 @@
         .hero h1 {
             max-width: 760px;
             background: none;
-            color: #24352b;
+            color: #392b2c;
             font-family: 'Manrope', sans-serif;
             font-size: clamp(2.2rem, 5vw, 3.5rem);
             letter-spacing: -0.045em;
@@ -548,28 +550,28 @@
         .hero p {
             max-width: 700px;
             margin: 0 0 1.4rem;
-            color: #66736b;
+            color: #705f60;
         }
 
         .author-card {
             flex-wrap: wrap;
             border: 0;
-            border-left: 3px solid #8aa491;
+            border-left: 3px solid #d9849b;
             border-radius: 0;
             background: transparent;
             padding: 0.15rem 0 0.15rem 0.85rem;
-            color: #536158;
+            color: #705f60;
             backdrop-filter: none;
         }
 
         .author-card strong {
-            color: #315b46;
+            color: #a74365;
         }
 
         .handbook-banner {
-            border: 1px solid #dfe5dd;
+            border: 1px solid #f0ddd5;
             border-radius: 12px;
-            background: #e9eee8;
+            background: linear-gradient(110deg, #fff0f0, #fff6df);
             box-shadow: none;
             margin-bottom: 3rem;
             padding: 1.5rem 1.75rem;
@@ -577,12 +579,12 @@
         }
 
         .handbook-banner-content h2 {
-            color: #283b2f;
+            color: #50343b;
             font-family: 'Manrope', sans-serif;
         }
 
         .handbook-banner-content p {
-            color: #637168;
+            color: #705f60;
         }
 
         .catalog-heading {
@@ -594,7 +596,7 @@
         }
 
         .catalog-kicker {
-            color: #55715f;
+            color: #a74365;
             font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 0.12em;
@@ -603,14 +605,14 @@
 
         .catalog-heading h2 {
             margin-top: 0.2rem;
-            color: #24352b;
+            color: #392b2c;
             font-family: 'Manrope', sans-serif;
             font-size: clamp(1.5rem, 3vw, 2rem);
             letter-spacing: -0.035em;
         }
 
         .catalog-count {
-            color: #748078;
+            color: #927e78;
             font-size: 0.85rem;
         }
 
@@ -629,7 +631,7 @@
         }
 
         .search-box-wrap input {
-            border: 1px solid #d9ddd7;
+            border: 1px solid #eadbd4;
             border-radius: 8px;
             background: #fff;
             color: #25312a;
@@ -637,13 +639,13 @@
         }
 
         .search-box-wrap input:focus {
-            border-color: #78927f;
+            border-color: #d9849b;
             background: #fff;
-            box-shadow: 0 0 0 3px rgba(79, 111, 88, 0.12);
+            box-shadow: 0 0 0 3px rgba(185, 78, 112, 0.12);
         }
 
         .search-icon {
-            color: #718078;
+            color: #927e78;
             font-size: 1.1rem;
         }
 
@@ -654,21 +656,22 @@
 
         .empty-state {
             display: none;
-            border: 1px dashed #cbd3ca;
+            border: 1px dashed #e6c9b6;
             border-radius: 10px;
-            color: #66736b;
+            color: #705f60;
+            background: #fffdf9;
             padding: 2rem;
             text-align: center;
         }
 
         .card {
             min-height: 290px;
-            border: 1px solid #e1e4dd;
+            border: 1px solid #f0e1da;
             border-radius: 10px;
             background: #fff;
             padding: 1.35rem;
             backdrop-filter: none;
-            box-shadow: 0 2px 8px rgba(36, 53, 43, 0.025);
+            box-shadow: 0 2px 8px rgba(87, 51, 51, 0.035);
         }
 
         .card::before {
@@ -677,9 +680,9 @@
 
         .card:hover {
             transform: translateY(-2px);
-            border-color: #b8c9bd;
+            border-color: #dfa0af;
             background: #fff;
-            box-shadow: 0 10px 24px rgba(36, 53, 43, 0.08);
+            box-shadow: 0 10px 24px rgba(87, 51, 51, 0.08);
         }
 
         .card-header {
@@ -689,8 +692,8 @@
         .js-badge {
             border: 0;
             border-radius: 4px;
-            background: #edf1ec;
-            color: #3d5e49;
+            background: #f9e5e9;
+            color: #98415f;
             font-family: 'DM Sans', sans-serif;
             font-size: 0.72rem;
             letter-spacing: 0.045em;
@@ -713,25 +716,25 @@
         }
 
         .card-actions {
-            border-top-color: #edf0eb;
+            border-top-color: #f0e5df;
         }
 
         .btn-launch {
-            border: 1px solid #315b46;
+            border: 1px solid #b94e70;
             border-radius: 7px;
-            background: #315b46;
+            background: #b94e70;
             color: #fff;
         }
 
         .btn-launch:hover {
-            border-color: #244936;
-            background: #244936;
+            border-color: #983a5a;
+            background: #983a5a;
             box-shadow: none;
         }
 
         footer {
-            border-top-color: #dedfd7;
-            color: #748078;
+            border-top-color: #eedbd3;
+            color: #927e78;
         }
 
         @media (max-width: 900px) {
