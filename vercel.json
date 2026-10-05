@@ -88,7 +88,7 @@
       "dest": "/api/index.php"
     },
     {
-      "src": "^/(?:Jobsheet new|jobsheet-new|sisalon|Jobsheet7|jobsheet7|Jobsheet8|jobsheet8|Jobsheet9|jobsheet9|Jobsheet11|jobsheet11|api)(?:/(.*))?$",
+      "src": "^/(?:Jobsheet new|jobsheet-new|sisalon|Jobsheet7|jobsheet7|Jobsheet8|jobsheet8|Jobsheet9|jobsheet9|Jobsheet11|jobsheet11|Jobsheet12|jobsheet12|api)(?:/(.*))?$",
       "dest": "/api/index.php"
     },
     {

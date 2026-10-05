@@ -36,6 +36,7 @@ $aliasMap = [
     '/jobsheet8'            => '/Jobsheet8',
     '/jobsheet9'            => '/Jobsheet9',
     '/jobsheet11'           => '/Jobsheet11',
+    '/jobsheet12'           => '/Jobsheet12',
     '/handbook'             => '/handbook',
 ];
 
