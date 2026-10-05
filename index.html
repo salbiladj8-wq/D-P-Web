@@ -839,7 +839,7 @@
                 <p class="catalog-kicker">Arsip praktikum</p>
                 <h2 id="catalogTitle">Jelajahi jobsheet</h2>
             </div>
-            <p class="catalog-count" id="resultsCount" aria-live="polite">15 modul</p>
+            <p class="catalog-count" id="resultsCount" aria-live="polite">16 modul</p>
         </section>
 
         <div class="controls-row">
@@ -851,6 +851,34 @@
 
         <!-- Cards Grid -->
         <div class="cards-grid" id="cardsGrid">
+
+            <!-- Card: Jobsheet 13 -->
+            <article class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="js-badge">Jobsheet 13</span>
+                    </div>
+                    <h2 class="card-title">SISALON - Snapshot Deployment &amp; Dokumentasi</h2>
+                    <p class="card-desc">
+                        Snapshot akhir SISALON dengan pengelolaan data salon, autentikasi petugas, transaksi layanan, panduan deployment Supabase/Vercel, dan manual pengguna.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tag php">PHP PDO</span>
+                        <span class="tag supabase">Supabase</span>
+                        <span class="tag db">PostgreSQL</span>
+                        <span class="tag js">Vercel</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="/Jobsheet13/index.php" class="btn-launch">
+                        <span>Buka Jobsheet 13</span>
+                        <span>&rarr;</span>
+                    </a>
+                    <a href="/Jobsheet13/docs/jobsheet-13.md" class="btn-launch">
+                        <span>Dokumentasi</span>
+                    </a>
+                </div>
+            </article>
 
             <!-- Card: Jobsheet 12 -->
             <article class="card">
@@ -1236,20 +1264,21 @@
         const resultsCount = document.getElementById('resultsCount');
         const emptyState = document.getElementById('emptyState');
         const moduleOrder = new Map([
-            ['jobsheet 12', 1],
-            ['jobsheet 11', 2],
-            ['jobsheet 10', 3],
-            ['jobsheet 9', 4],
-            ['jobsheet new', 5],
-            ['jobsheet 8', 6],
-            ['jobsheet 7', 7],
-            ['jobsheet 6', 8],
-            ['jobsheet 5', 9],
-            ['jobsheet 4', 10],
-            ['jobsheet 3', 11],
-            ['js 3 bootstrap', 12],
-            ['jobsheet 2', 13],
-            ['jobsheet 1', 14]
+            ['jobsheet 13', 1],
+            ['jobsheet 12', 2],
+            ['jobsheet 11', 3],
+            ['jobsheet 10', 4],
+            ['jobsheet 9', 5],
+            ['jobsheet new', 6],
+            ['jobsheet 8', 7],
+            ['jobsheet 7', 8],
+            ['jobsheet 6', 9],
+            ['jobsheet 5', 10],
+            ['jobsheet 4', 11],
+            ['jobsheet 3', 12],
+            ['js 3 bootstrap', 13],
+            ['jobsheet 2', 14],
+            ['jobsheet 1', 15]
         ]);
 
         cards.sort((first, second) => {

@@ -655,6 +655,7 @@
             <a href="#arsitektur" class="nav-item">🏗️ Arsitektur Vercel &amp; Cloud</a>
             
             <div class="nav-category">Jobsheet terbaru</div>
+            <a href="#js13" class="nav-item">JS 13: Deployment SISALON</a>
             <a href="#js12" class="nav-item">JS 12: Integrasi Transaksi SISALON</a>
             <a href="#js11" class="nav-item">JS 11: Keamanan Web Dasar</a>
             <a href="#js10" class="nav-item">JS 10: Autentikasi &amp; Session</a>
@@ -1101,11 +1102,44 @@ if (searchInput) {
             </p>
         </section>
 
-        <!-- 17. Tanya Jawab Teknis -->
+        <!-- 17. Jobsheet 13: Deployment dan Dokumentasi SISALON -->
+        <section id="js13" class="doc-section">
+            <div class="section-header">
+                <span class="section-icon">🚀</span>
+                <h2>17. Jobsheet 13: Deployment &amp; Dokumentasi SISALON</h2>
+            </div>
+            <p>
+                Jobsheet 13 adalah snapshot akhir SISALON setelah integrasi transaksi layanan. Aplikasi menggabungkan data layanan, pelanggan, karyawan, akun petugas, transaksi aktif, dan riwayat transaksi dengan deployment PHP serverless di Vercel serta PostgreSQL Supabase.
+            </p>
+            <h3>Stack dan alur data</h3>
+            <ul>
+                <li><strong>Frontend:</strong> HTML, CSS, dan JavaScript untuk tampilan serta interaksi aplikasi.</li>
+                <li><strong>Backend:</strong> PHP native dengan PDO dan ekstensi <code>pdo_pgsql</code>.</li>
+                <li><strong>Database:</strong> PostgreSQL Supabase menggunakan koneksi SSL. Konfigurasi production diberikan melalui Vercel Environment Variables, bukan disimpan di repository.</li>
+                <li><strong>Entitas:</strong> <code>layanan</code>, <code>pelanggan</code>, <code>karyawan</code>, <code>users</code>, dan <code>transaksi_layanan</code>. Transaksi menyimpan snapshot harga/durasi, status, serta waktu mulai dan selesai.</li>
+                <li><strong>Akses:</strong> Tamu dapat melihat beranda dan daftar data; perubahan data serta transaksi membutuhkan login petugas.</li>
+            </ul>
+            <h3>Deployment dan verifikasi</h3>
+            <ol>
+                <li>Siapkan skema database dengan menjalankan skrip SQL dalam urutan yang didokumentasikan. Jika tabel sudah tersedia di Supabase, jangan jalankan ulang seed data yang tidak diperlukan.</li>
+                <li>Atur variabel <code>SUPABASE_DB_HOST</code>, <code>SUPABASE_DB_PORT</code>, <code>SUPABASE_DB_NAME</code>, <code>SUPABASE_DB_USER</code>, dan <code>SUPABASE_DB_PASSWORD</code> pada environment Vercel. Jangan commit berkas <code>.env</code>.</li>
+                <li>Deploy dari root repository portal dan buka aplikasi melalui route <code>/Jobsheet13/</code>.</li>
+                <li>Uji login, operasi data, pembuatan transaksi, penyelesaian layanan, serta riwayat setelah deployment.</li>
+            </ol>
+            <p>
+                Buka <a href="/Jobsheet13/index.php">aplikasi Jobsheet 13</a>,
+                <a href="/Jobsheet13/docs/deployment.md">panduan deployment</a>, atau
+                <a href="/Jobsheet13/docs/manual-pengguna.md">manual pengguna</a>.
+                Dokumen ringkasan snapshot tersedia di
+                <a href="/Jobsheet13/docs/jobsheet-13.md">Jobsheet 13</a>.
+            </p>
+        </section>
+
+        <!-- 18. Tanya Jawab Teknis -->
         <section id="qa-teknis" class="doc-section">
             <div class="section-header">
                 <span class="section-icon">🎯</span>
-                <h2>17. Tanya Jawab &amp; Pembahasan Teknis Kodingan (Q&amp;A)</h2>
+                <h2>18. Tanya Jawab &amp; Pembahasan Teknis Kodingan (Q&amp;A)</h2>
             </div>
             <p>
                 Berikut adalah 10 pembahasan konsep teknis penting seputar implementasi kode pada proyek ini. Klik pada setiap pertanyaan untuk membuka pembahasan lengkap:
