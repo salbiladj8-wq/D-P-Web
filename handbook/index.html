@@ -655,6 +655,7 @@
             <a href="#arsitektur" class="nav-item">🏗️ Arsitektur Vercel &amp; Cloud</a>
             
             <div class="nav-category">Jobsheet terbaru</div>
+            <a href="#js12" class="nav-item">JS 12: Integrasi Transaksi SISALON</a>
             <a href="#js11" class="nav-item">JS 11: Keamanan Web Dasar</a>
             <a href="#js10" class="nav-item">JS 10: Autentikasi &amp; Session</a>
             <a href="#js9" class="nav-item">JS 9: CRUD SISALON</a>
@@ -1075,11 +1076,36 @@ if (searchInput) {
             </p>
         </section>
 
-        <!-- 16. Tanya Jawab Teknis -->
+        <!-- 16. Jobsheet 12: Integrasi Modul Transaksi SISALON -->
+        <section id="js12" class="doc-section">
+            <div class="section-header">
+                <span class="section-icon">🔄</span>
+                <h2>16. Jobsheet 12: Integrasi Modul Transaksi SISALON</h2>
+            </div>
+            <p>
+                Jobsheet 12 melanjutkan aplikasi SISALON dari Jobsheet 11 dengan mengintegrasikan data pelanggan, layanan, dan karyawan ke dalam satu transaksi layanan. Karena SISALON tidak mengelola stok buku, alur peminjaman dan pengembalian pada jobsheet referensi disesuaikan menjadi memulai dan menyelesaikan layanan.
+            </p>
+            <h3>Fitur &amp; Kodingan Kunci:</h3>
+            <ul>
+                <li><strong>Relasi transaksi:</strong> Tabel <code>transaksi_layanan</code> menghubungkan <code>pelanggan</code>, <code>layanan</code>, dan <code>karyawan</code> menggunakan foreign key.</li>
+                <li><strong>Harga dan durasi historis:</strong> <code>harga_saat_transaksi</code> dan <code>durasi_saat_transaksi</code> menyimpan snapshot agar transaksi lama tidak ikut berubah ketika data layanan diperbarui.</li>
+                <li><strong>Transaksi baru:</strong> Form memilih pelanggan, layanan, dan karyawan. Proses penyimpanan memeriksa data dalam transaksi database dan mengunci baris pilihan dengan <code>SELECT ... FOR UPDATE</code>.</li>
+                <li><strong>Penyelesaian layanan:</strong> Daftar layanan berlangsung hanya menampilkan status <code>berlangsung</code>. Handler mengunci transaksi dan mengubah status serta waktu selesai secara atomik untuk mencegah penyelesaian ganda.</li>
+                <li><strong>Riwayat per pelanggan:</strong> JOIN transaksi dengan layanan dan karyawan menampilkan waktu, harga, durasi, dan status historis.</li>
+                <li><strong>Integrasi antarmuka:</strong> Menu transaksi hanya tampil setelah petugas login, dan kartu beranda menghitung layanan berstatus berlangsung.</li>
+                <li><strong>Skema database:</strong> Jalankan <code>Jobsheet12/sql/03_transaksi_layanan.sql</code> sekali pada database SISALON yang sama sebelum menggunakan fitur transaksi.</li>
+                <li><strong>Deployment:</strong> Jobsheet 12 dapat dibuka dari portal Vercel melalui route <code>/Jobsheet12/</code>.</li>
+            </ul>
+            <p>
+                Source code tersedia pada <a href="/Jobsheet12/index.php">aplikasi Jobsheet 12</a> dan panduan penggunaan ada di <a href="/Jobsheet12/docs/jobsheet-12.md">dokumentasi Jobsheet 12</a>.
+            </p>
+        </section>
+
+        <!-- 17. Tanya Jawab Teknis -->
         <section id="qa-teknis" class="doc-section">
             <div class="section-header">
                 <span class="section-icon">🎯</span>
-                <h2>16. Tanya Jawab &amp; Pembahasan Teknis Kodingan (Q&amp;A)</h2>
+                <h2>17. Tanya Jawab &amp; Pembahasan Teknis Kodingan (Q&amp;A)</h2>
             </div>
             <p>
                 Berikut adalah 10 pembahasan konsep teknis penting seputar implementasi kode pada proyek ini. Klik pada setiap pertanyaan untuk membuka pembahasan lengkap:
