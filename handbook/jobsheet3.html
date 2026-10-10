@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Handbook Jobsheet 3 | Flexbox dan Grid</title>
+    <link rel="stylesheet" href="handbook.css">
+</head>
+<body>
+<div class="page">
+    <header class="top">
+        <p class="eyebrow">Handbook praktikum · SIMPUS-Mini</p>
+        <h1>Jobsheet 3 — Layout Flexbox dan Grid</h1>
+        <p>Panduan struktur SIMPUS-Mini dan cara membaca aturan layout serta responsif.</p>
+        <nav aria-label="Navigasi handbook">
+            <a href="/index.html">Portal Jobsheet</a>
+            <a href="/Jobsheet3/index.html">Buka aplikasi</a>
+            <a href="/handbook/index.html">Handbook umum</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Tujuan dan hasil</h2>
+            <p>Jobsheet 3 menggunakan layout CSS modern pada aplikasi perpustakaan: Flexbox untuk susunan satu dimensi seperti header/navigasi dan Grid untuk area statistik. Tabel/form dan halaman buku/anggota tetap menjadi konten HTML yang sama.</p>
+            <p class="callout">Tema CSS telah disesuaikan agar serasi dengan Jobsheet 7–13. Penyesuaian berada di stylesheet Jobsheet 3 dan tidak mengubah HTML maupun perilaku aplikasi.</p>
+        </section>
+        <section>
+            <h2>Peta berkas</h2>
+            <ul class="file-list">
+                <li><a href="/Jobsheet3/index.html"><code>index.html</code></a> — beranda, header, navigasi, dan kartu ringkasan.</li>
+                <li><a href="/Jobsheet3/buku/list.html"><code>buku/list.html</code></a> — tabel koleksi buku.</li>
+                <li><a href="/Jobsheet3/buku/tambah.html"><code>buku/tambah.html</code></a> — form buku.</li>
+                <li><a href="/Jobsheet3/anggota/list.html"><code>anggota/list.html</code></a> — tabel anggota.</li>
+                <li><a href="/Jobsheet3/anggota/tambah.html"><code>anggota/tambah.html</code></a> — form anggota.</li>
+                <li><a href="/Jobsheet3/assets/style.css"><code>assets/style.css</code></a> — layout, tema visual, komponen, dan breakpoint responsif.</li>
+                <li><code>laporan/</code> — penjelasan HTML, stylesheet, dan hasil perubahan praktikum.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Flexbox dan Grid</h2>
+            <p>Flexbox dipakai ketika elemen perlu mengalir pada satu sumbu, misalnya item navigasi yang berjajar dan dapat membungkus. Grid menata ringkasan ke kolom-kolom yang sejajar dan memberi ruang konsisten melalui <code>gap</code>. Pada breakpoint kecil, jumlah kolom dikurangi agar kartu tidak terlalu sempit.</p>
+            <pre><code>/* Pola konseptual untuk statistik */
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 1rem;</code></pre>
+            <p>Ini contoh konsep layout; aturan stylesheet asli tetap digunakan dan berisi penyesuaian responsif untuk ukuran perangkat.</p>
+        </section>
+        <section>
+            <h2>Navigasi dan responsivitas</h2>
+            <p>Menu layar kecil menggunakan mekanisme checkbox dan label hamburger pada markup halaman. CSS menampilkan kontrol menu pada breakpoint tertentu, menyembunyikan/menampilkan navigasi berdasarkan keadaan checkbox, dan mengubah susunan kartu. Jangan menghapus relasi <code>for</code>/<code>id</code> pada checkbox karena CSS bergantung pada relasi tersebut.</p>
+            <p>Tabel dibungkus dengan area yang mengizinkan overflow horizontal agar kolom tetap dapat diakses pada layar sempit.</p>
+        </section>
+        <section>
+            <h2>Tema CSS dan cakupan perubahan</h2>
+            <p>Aturan yang telah ada untuk latar, warna teks, header, kartu statistik, tabel, form, tombol, dan footer diselaraskan dengan palet krem/rose. Kartu dibuat lebih jelas melalui permukaan terang, radius, bayangan lembut, serta jarak yang konsisten. CSS sumber tetap berada di <code>Jobsheet3/assets/style.css</code>; tidak ada impor tema eksternal.</p>
+        </section>
+        <section>
+            <h2>Alur dan pemeriksaan</h2>
+            <ol>
+                <li>Jelajahi Beranda, Daftar Buku, Tambah Buku, Daftar Anggota, dan Tambah Anggota.</li>
+                <li>Periksa tiga kolom ringkasan di desktop dan perubahan jumlah kolom pada ukuran tablet/mobile.</li>
+                <li>Uji tombol hamburger dengan mouse dan keyboard serta pastikan tautan dapat difokuskan.</li>
+                <li>Pastikan tabel tidak memotong kolom dan setiap halaman menggunakan stylesheet yang sama.</li>
+            </ol>
+            <p class="muted">Data Jobsheet 3 masih disediakan sebagai contoh halaman statis; tata letak responsif tidak dengan sendirinya menambahkan backend atau penyimpanan.</p>
+        </section>
+    </main>
+    <footer>Handbook Jobsheet 3 · Flexbox, Grid, responsivitas · SIMPUS-Mini</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Handbook Jobsheet 2 | CSS dan Box Model</title>
+    <link rel="stylesheet" href="handbook.css">
+</head>
+<body>
+<div class="page">
+    <header class="top">
+        <p class="eyebrow">Handbook praktikum · SIMPUS-Mini</p>
+        <h1>Jobsheet 2 — Styling dan CSS Box Model</h1>
+        <p>Panduan struktur halaman, stylesheet eksternal, komponen, dan tampilan hasil pembaruan.</p>
+        <nav aria-label="Navigasi handbook">
+            <a href="/index.html">Portal Jobsheet</a>
+            <a href="/Jobsheet2/index.html">Buka aplikasi</a>
+            <a href="/handbook/index.html">Handbook umum</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Tujuan dan hasil</h2>
+            <p>Jobsheet 2 memisahkan tampilan dari struktur HTML dengan satu stylesheet yang dipakai ulang oleh beranda, daftar, dan form. CSS asli tetap dipertahankan; deklarasi tampilan di dalam aturan yang sudah ada diselaraskan dengan bahasa visual Jobsheet 7–13.</p>
+            <p class="callout">Pembaruan hanya menyentuh <code>assets/style.css</code>. Tidak ada perubahan pada teks halaman, tautan, contoh data, atau fitur.</p>
+        </section>
+        <section>
+            <h2>Peta berkas</h2>
+            <ul class="file-list">
+                <li><a href="/Jobsheet2/index.html"><code>index.html</code></a> — beranda dan ringkasan statistik.</li>
+                <li><a href="/Jobsheet2/buku/list.html"><code>buku/list.html</code></a> — daftar buku dalam tabel.</li>
+                <li><a href="/Jobsheet2/buku/tambah.html"><code>buku/tambah.html</code></a> — form tambah buku.</li>
+                <li><a href="/Jobsheet2/anggota/list.html"><code>anggota/list.html</code></a> — tabel data anggota.</li>
+                <li><a href="/Jobsheet2/anggota/tambah.html"><code>anggota/tambah.html</code></a> — form tambah anggota.</li>
+                <li><a href="/Jobsheet2/assets/style.css"><code>assets/style.css</code></a> — aturan visual bersama untuk seluruh halaman.</li>
+                <li><code>laporan/</code> — laporan praktikum untuk CSS dan halaman terkait.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Konsep CSS yang digunakan</h2>
+            <ul>
+                <li><strong>Box sizing dan box model:</strong> <code>box-sizing</code>, padding, border, margin, dan ukuran komponen.</li>
+                <li><strong>Selektor elemen dan turunan:</strong> aturan umum untuk body, header, navigasi, tabel, form, tombol, dan footer.</li>
+                <li><strong>Flexbox:</strong> menyusun judul/header dan menu secara horizontal serta menyesuaikannya saat ruang menyempit.</li>
+                <li><strong>Grid:</strong> menata kartu ringkasan menjadi beberapa kolom yang dapat berubah menurut lebar layar.</li>
+                <li><strong>Keadaan interaksi:</strong> <code>:hover</code> pada tombol/link dan <code>:focus</code> pada kontrol form.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Bahasa visual yang diterapkan</h2>
+            <p>Latar krem lembut dan bidang kartu putih/rose memberi hirarki tanpa mengubah struktur DOM. Header dan navigasi dibuat lebih halus, konten utama dibaca dalam panel bersudut membulat, statistik tampil sebagai kartu, sementara tabel dan form mendapat border, jarak, dan keadaan fokus/hover yang konsisten. Aturan responsif tetap mengikuti stylesheet Jobsheet 2.</p>
+            <p>Perubahan digabungkan langsung ke deklarasi selektor CSS yang sudah ada. Tidak ada stylesheet tema kedua, blok tema terpisah, atau <code>@import</code>.</p>
+        </section>
+        <section>
+            <h2>Alur aplikasi dan batas fitur</h2>
+            <p>Menu menghubungkan beranda, daftar, dan form buku/anggota. Isi daftar dan statistik merupakan contoh statis dalam HTML. Tombol aksi yang terlihat tidak terhubung ke penyimpanan server pada Jobsheet 2; memuat ulang halaman mengembalikan isi awal.</p>
+        </section>
+        <section>
+            <h2>Pemeriksaan</h2>
+            <ol>
+                <li>Buka semua lima halaman HTML dan pastikan <code>assets/style.css</code> terpasang dari root maupun subfolder.</li>
+                <li>Periksa header, kartu ringkasan, tabel, form, tombol, dan footer pada layar lebar.</li>
+                <li>Persempit layar untuk memeriksa wrapping navigasi dan konten.</li>
+                <li>Gunakan keyboard untuk memastikan fokus input terlihat.</li>
+            </ol>
+        </section>
+    </main>
+    <footer>Handbook Jobsheet 2 · CSS Box Model · SIMPUS-Mini</footer>
+</div>
+</body>
+</html>

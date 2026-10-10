@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Handbook Jobsheet 1 | HTML Semantik</title>
+    <link rel="stylesheet" href="handbook.css">
+</head>
+<body>
+<div class="page">
+    <header class="top">
+        <p class="eyebrow">Handbook praktikum · SIMPUS-Mini</p>
+        <h1>Jobsheet 1 — Fondasi HTML Semantik</h1>
+        <p>Petunjuk membaca struktur dokumen HTML dan halaman statis perpustakaan mini.</p>
+        <nav aria-label="Navigasi handbook">
+            <a href="/index.html">Portal Jobsheet</a>
+            <a href="/Jobsheet1/index.html">Buka aplikasi</a>
+            <a href="/handbook/index.html">Handbook umum</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Tujuan dan ruang lingkup</h2>
+            <p>Jobsheet ini menyusun antarmuka SIMPUS-Mini menggunakan HTML semantik. Berkas aplikasi Jobsheet 1 tidak memuat stylesheet eksternal; tampilannya mengikuti gaya bawaan browser. Perubahan tema CSS yang diterapkan kemudian hanya berlaku pada Jobsheet 2–6.</p>
+            <p class="callout">Fokus belajar: hierarki dokumen, tautan relatif, tabel data, dan form HTML. Contoh data di halaman ditulis langsung di HTML dan tidak tersimpan ke database.</p>
+        </section>
+        <section>
+            <h2>Peta berkas</h2>
+            <ul class="file-list">
+                <li><a href="/Jobsheet1/index.html"><code>index.html</code></a> — beranda SIMPUS-Mini, navigasi, ringkasan buku/anggota/peminjaman, dan footer.</li>
+                <li><a href="/Jobsheet1/buku/list.html"><code>buku/list.html</code></a> — tabel koleksi buku beserta kolom informasi dan aksi yang dicontohkan.</li>
+                <li><a href="/Jobsheet1/buku/tambah.html"><code>buku/tambah.html</code></a> — form HTML untuk memasukkan informasi buku.</li>
+                <li><a href="/Jobsheet1/anggota/list.html"><code>anggota/list.html</code></a> — tabel anggota perpustakaan.</li>
+                <li><a href="/Jobsheet1/anggota/tambah.html"><code>anggota/tambah.html</code></a> — form untuk data anggota.</li>
+                <li><code>laporan/</code> — lima laporan praktikum per halaman yang merangkum hasil Jobsheet 1.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Mengenali struktur halaman</h2>
+            <p>Dokumen menggunakan deklarasi <code>&lt;!DOCTYPE html&gt;</code>, elemen akar <code>&lt;html lang="id"&gt;</code>, metadata dalam <code>&lt;head&gt;</code>, dan konten yang dapat dibaca dalam <code>&lt;body&gt;</code>. Bagian layar dibagi memakai <code>&lt;header&gt;</code> untuk identitas dan navigasi, <code>&lt;main&gt;</code> untuk konten utama, <code>&lt;section&gt;</code> untuk kelompok topik, <code>&lt;article&gt;</code> untuk unit mandiri, dan <code>&lt;footer&gt;</code> untuk informasi penutup.</p>
+            <p>Tautan di dalam aplikasi menggunakan path relatif, misalnya <code>../index.html</code> dari subfolder kembali ke halaman utama. Pola ini menjaga navigasi tetap berfungsi pada subhalaman.</p>
+        </section>
+        <section>
+            <h2>Tabel dan formulir</h2>
+            <p>Daftar menggunakan <code>&lt;table&gt;</code> dengan kelompok kepala tabel dan isi tabel. Setiap baris data berada di <code>&lt;tr&gt;</code>, judul kolom menggunakan <code>&lt;th&gt;</code>, dan nilai memakai <code>&lt;td&gt;</code>. Elemen tabel dipakai untuk data tabular, bukan untuk menyusun layout halaman.</p>
+            <p>Form tambah buku/anggota berisi label dan kontrol input yang sesuai tipe informasinya. Pasangkan <code>for</code> pada label dengan <code>id</code> kontrol agar nama field tetap dapat diakses melalui klik label dan pembaca layar. HTML Jobsheet 1 adalah demonstrasi antarmuka; tanpa endpoint backend, pengiriman form tidak membuat perubahan persisten.</p>
+        </section>
+        <section>
+            <h2>Alur penggunaan dan pengujian</h2>
+            <ol>
+                <li>Buka beranda, lalu gunakan tautan navigasi menuju daftar buku atau anggota.</li>
+                <li>Buka halaman tambah untuk memeriksa label, tipe input, dan alur tab keyboard.</li>
+                <li>Uji semua tautan pada halaman di root dan dari subfolder.</li>
+                <li>Pastikan halaman tetap terbaca saat diperbesar dan ketika lebar layar dipersempit.</li>
+            </ol>
+            <p class="muted">Jobsheet 1 tidak memiliki file CSS maupun JavaScript. Karena itu menu dan data merupakan struktur statis, bukan kontrol interaktif yang menyimpan perubahan.</p>
+        </section>
+    </main>
+    <footer>Handbook Jobsheet 1 · HTML semantik · SIMPUS-Mini</footer>
+</div>
+</body>
+</html>

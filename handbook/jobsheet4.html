@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Handbook Jobsheet 4 | Wireframe dan Responsif</title>
+    <link rel="stylesheet" href="handbook.css">
+</head>
+<body>
+<div class="page">
+    <header class="top">
+        <p class="eyebrow">Handbook praktikum · SIMPUS-Mini</p>
+        <h1>Jobsheet 4 — Wireframe dan Desain Responsif</h1>
+        <p>Panduan hierarki informasi, penyesuaian antarmuka, dan stylesheet pada Jobsheet 4.</p>
+        <nav aria-label="Navigasi handbook">
+            <a href="/index.html">Portal Jobsheet</a>
+            <a href="/Jobsheet4/index.html">Buka aplikasi</a>
+            <a href="/handbook/index.html">Handbook umum</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Tujuan dan ruang lingkup</h2>
+            <p>Jobsheet 4 berfokus pada wireframe, hierarki visual, dan tampilan yang dapat menyesuaikan layar. Struktur SIMPUS-Mini tetap mengarahkan pengguna dari beranda ke daftar serta form buku/anggota.</p>
+            <p class="callout">Perubahan yang diminta diterapkan pada CSS yang sudah ada di <code>Jobsheet4/assets/style.css</code>. HTML dan fitur tetap sebagaimana Jobsheet 4.</p>
+        </section>
+        <section>
+            <h2>Peta berkas</h2>
+            <ul class="file-list">
+                <li><a href="/Jobsheet4/index.html"><code>index.html</code></a> — beranda dan navigasi SIMPUS-Mini.</li>
+                <li><a href="/Jobsheet4/buku/list.html"><code>buku/list.html</code></a> — daftar buku.</li>
+                <li><a href="/Jobsheet4/buku/tambah.html"><code>buku/tambah.html</code></a> — form buku.</li>
+                <li><a href="/Jobsheet4/anggota/list.html"><code>anggota/list.html</code></a> — daftar anggota.</li>
+                <li><a href="/Jobsheet4/anggota/tambah.html"><code>anggota/tambah.html</code></a> — form anggota.</li>
+                <li><a href="/Jobsheet4/assets/style.css"><code>assets/style.css</code></a> — layout, komponen, breakpoint, dan tema yang diterapkan.</li>
+                <li><a href="/Jobsheet4/docs/wireframe.md"><code>docs/wireframe.md</code></a> — dokumen wireframe/desain praktikum.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Wireframe dan hirarki visual</h2>
+            <p>Wireframe membantu menetapkan urutan informasi sebelum detail warna. Header memperkenalkan aplikasi dan memberi navigasi; bagian pembuka menjelaskan tujuan halaman; ringkasan memprioritaskan angka utama; tabel/form menampilkan tugas inti; footer menutup halaman. Ukuran heading, kontras, posisi, dan ruang kosong membantu pengguna memindai konten.</p>
+            <p>Layout CSS menggunakan teknik alur fleksibel dan aturan breakpoint. Desktop menyediakan beberapa kolom, sedangkan layar kecil mengalihkan kartu ke susunan yang lebih sempit, menampilkan menu ringkas, dan mempertahankan akses tabel melalui scroll horizontal.</p>
+        </section>
+        <section>
+            <h2>Tema hasil pembaruan</h2>
+            <p>Permukaan krem/putih, aksen rose, border lembut, radius kartu, dan bayangan ringan diterapkan ke selektor CSS yang sudah ada. Header, navigasi, panel konten, statistik, tabel, form, tombol, dan footer tetap memakai struktur Jobsheet 4. Menu responsif checkbox tetap menggunakan pola <code>.nav-toggle:checked ~ nav</code>.</p>
+            <p>Dengan demikian wireframe dan susunan konten tidak diganti; yang diselaraskan adalah presentasi visual CSS.</p>
+        </section>
+        <section>
+            <h2>Langkah uji</h2>
+            <ol>
+                <li>Buka halaman beranda, daftar, dan form melalui navigasi.</li>
+                <li>Ubah lebar viewport dari desktop ke sekitar breakpoint tablet dan ponsel.</li>
+                <li>Tekan kontrol hamburger dan pastikan menu muncul; pilih tautan untuk menguji navigasi.</li>
+                <li>Pastikan tabel tetap dapat digulir dan tombol/form tidak saling bertumpuk.</li>
+            </ol>
+            <p class="muted">Proyek ini berfokus pada wireframe dan presentasi. Jangan mengasumsikan data formulir akan tersimpan tanpa backend.</p>
+        </section>
+    </main>
+    <footer>Handbook Jobsheet 4 · Wireframe dan responsivitas · SIMPUS-Mini</footer>
+</div>
+</body>
+</html>
