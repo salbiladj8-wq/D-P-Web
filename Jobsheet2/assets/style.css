@@ -10,9 +10,9 @@ body {
     background-color: var(--bg-page, #fdf7f5);
     line-height: 1.65;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-image: radial-gradient(circle at 8% 8%, rgba(233, 190, 205, 0.25), transparent 30%), radial-gradient(circle at 92% 85%, rgba(215, 175, 190, 0.2), transparent 32%), radial-gradient(rgba(201, 107, 134, 0.1) 1px, transparent 1px);
+    display: flex; /* mengatur tampilan halaman menjadi fleksibel */
+    flex-direction: column; /* mengatur susunan halamannya, dan memastikan footer tetap di bawah halaman */
+    background-image: radial-gradient(circle at 8% 8%, rgba(233, 190, 205, 0.25), transparent 30%), radial-gradient(circle at 92% 85%, rgba(215, 175, 190, 0.2), transparent 32%), radial-gradient(rgba(201, 107, 134, 0.1) 1px, transparent 1px); /* membuat background dengan pola radial gradient */
     background-size: auto, auto, 26px 26px;
     -webkit-font-smoothing: antialiased;
 }
@@ -22,11 +22,11 @@ a {
     text-decoration: none;
     transition: color 0.25s ease, background 0.25s ease;
 }
-
+/* Mengubah tampilan link saat di hover */
 a:hover {
     text-decoration: underline;
 }
-
+/* Mengatur tampilan judl dan menu2nya*/
 header {
     color: var(--text-main, #4a3a40);
     padding: 16px 7%;
@@ -46,7 +46,7 @@ header {
     background: rgba(255, 255, 255, 0.86);
     backdrop-filter: blur(14px);
 }
-
+/* Mengatur tampilan tulisan simpus-mini */
 header h1 {
     font-size: 25px;
     font-family: Georgia, "Times New Roman", serif;
@@ -58,14 +58,14 @@ header h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+/* Mengatur tampilan menu navigasi */
 header nav ul {
     list-style: none;
     display: flex;
     gap: 4px;
     align-items: center;
 }
-
+/* Mengatur tampilan link/ menu navigasi */
 header nav a {
     color: var(--text-main, #4a3a40);
     font-weight: 500;
@@ -78,6 +78,7 @@ header nav a {
     transition: background 0.25s ease, color 0.25s ease;
 }
 
+/* mengubah warna menu saat di hover */
 header nav a:hover {
     text-decoration: none;
     color: var(--pink-dark, #a34d68);
@@ -90,30 +91,30 @@ main {
     max-width: 1180px;
     margin: 0 auto;
     padding: 32px 0 55px;
-    flex: 1;
-    width: 86%;
+    flex: 1; /* mendorong footer ke bawah */
+    width: 86%; /* menyesuaikan lebar konten utama  width: ukuran yang diinginkan. max-width: batas atas ukuran tersebut.*/
 }
 
 section {
-    border-radius: 22px;
+    border-radius: 22px; /* Membuat sudut melengkung pada elemen section */
     padding: 30px;
     margin-bottom: 32px;
     box-shadow: 0 10px 28px rgba(120, 60, 80, 0.1);
-    position: relative;
-    overflow: hidden;
-    border: 1px solid var(--border-subtle, rgba(163, 77, 104, 0.16));
+    position: relative; /* Menentukan posisi relatif untuk elemen section */
+    overflow: hidden; /* Mengatur konten yang melampaui batas elemen section agar tersembunyi */
+    border: 1px solid var(--border-subtle, rgba(163, 77, 104, 0.16)); /* border halus */
     background: rgba(255, 255, 255, 0.68);
     backdrop-filter: blur(10px);
 }
 
 section h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Memberikan jarak bawah pada elemen h2 */
     color: var(--text-main, #4a3a40);
     font-family: Georgia, "Times New Roman", serif;
     font-size: 24px;
     letter-spacing: 0.3px;
 }
-
+/* Mengatur tampilan section kedua dengan grid layout (main elemen harus berada di dalam main, section memilih elemen section, nth-of-type(2) memlh section berdasarkan urutan dan tipe yg sama pada parentnya) */
 main section:nth-of-type(2) {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -152,7 +153,7 @@ main section:nth-of-type(2) article {
     --accent: #c96b86;
     --accent-soft: rgba(201, 107, 134, 0.14);
 }
-
+/* Mengatur tampilan icon pada setiap artikel di section kedua */
 main section:nth-of-type(2) article::before {
     display: block;
     width: 46px;
@@ -165,20 +166,20 @@ main section:nth-of-type(2) article::before {
     background-size: 22px 22px;
     content: "";
 }
-
+/* Mengatur tampilan icon pada artikel pertama di section kedua */
 main section:nth-of-type(2) article:nth-of-type(1)::before {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a34d68' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 3a3 3 0 1 0 3 3'/><path d='M6 21a3 3 0 1 0 3-3'/><path d='M9 6 20 17'/><path d='M9 18 20 7'/></svg>");
 }
-
+/* Mengatur tampilan icon pada artikel kedua di section kedua */
 main section:nth-of-type(2) article:nth-of-type(2)::before {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23996f2e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='9' cy='7' r='4'/><path d='M17 11a4 4 0 1 0-3-6.7'/><path d='M1 21v-1a6 6 0 0 1 12 0v1'/><path d='M17 14a6 6 0 0 1 6 6v1'/></svg>");
 }
-
+/* Mengatur tampilan icon pada artikel ketiga di section kedua */
 main section:nth-of-type(2) article:nth-of-type(3)::before {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236f5488' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='2' width='16' height='20' rx='2'/><path d='M9 22v-4h6v4'/><path d='M8 6h.01'/><path d='M16 6h.01'/><path d='M12 6h.01'/><path d='M8 10h.01'/><path d='M16 10h.01'/><path d='M12 10h.01'/></svg>");
 }
 
-
+/* Mengatur tampilan artikel saat di hover */
 main section:nth-of-type(2) article:hover {
     transform: translateY(-5px);
     box-shadow: 0 16px 34px rgba(120, 60, 80, 0.16);
@@ -229,15 +230,15 @@ thead {
     color: var(--pink-dark, #a34d68);
     background: rgba(201, 107, 134, 0.1);
 }
-
+/* Mengatur tampilan baris genap pada tabel */
 tbody tr:nth-child(even) {
     background-color: rgba(247, 219, 227, 0.16);
 }
-
+/* Mengatur tampilan baris saat di hover pada tabel */
 tbody tr:hover {
     background-color: rgba(247, 219, 227, 0.4);
 }
-
+/* Mengatur tampilan tombol pada tabel */
 td button {
     padding: 0.4rem 0.8rem;
     margin-right: 0.35rem;
